@@ -11,7 +11,7 @@ export default function Hero() {
 
       {/* Background image */}
       <Image
-        src="/images/DSC_9320.jpg"
+        src="/images/webp/image94.webp"
         alt="Vjenčanje"
         fill
         priority
