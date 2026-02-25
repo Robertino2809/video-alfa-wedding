@@ -60,9 +60,20 @@ export default function Hero() {
           >
             <Link
               href="#kontakt"
-              className="bg-white text-black px-10 py-4 uppercase tracking-[0.2em] text-sm hover:bg-black hover:text-white transition duration-500"
+              className="
+                inline-flex items-center justify-center
+                w-full sm:w-auto
+                px-8 sm:px-10
+                py-4
+                text-sm
+                uppercase tracking-[0.25em]
+                bg-white text-black
+                transition duration-500
+                hover:bg-black hover:text-white
+              "
             >
-              Rezervirajte svoj datum →
+              <span className="mr-3">Rezervirajte svoj datum</span>
+              <span className="text-lg">→</span>
             </Link>
           </motion.div>
 

@@ -46,7 +46,7 @@ export default function Social() {
         </motion.h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((src, index) => (
             <motion.div
               key={index}
@@ -54,13 +54,15 @@ export default function Social() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative w-full h-60 overflow-hidden rounded-xl"
+              className="overflow-hidden rounded-xl"
             >
               <Image
                 src={src}
                 alt="Social fotografija"
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                width={800}   // možeš prilagoditi
+                height={1000} // omjer nije bitan jer zadržava proporcije
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="w-full h-auto transition-transform duration-700 hover:scale-105"
               />
             </motion.div>
           ))}

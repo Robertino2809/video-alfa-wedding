@@ -10,7 +10,7 @@ export default function ContactHero() {
 
       {/* Background image */}
       <Image
-        src="/images/webp/image34.webp"
+        src="/images/webp/image53.webp"
         alt="Kontakt"
         fill
         priority

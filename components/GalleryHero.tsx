@@ -9,7 +9,7 @@ export default function GalleryHero() {
 
       {/* Background image */}
       <Image
-        src="/images/webp/image87.webp"
+        src="/images/webp/image26.webp"
         alt="Galerija"
         fill
         priority
