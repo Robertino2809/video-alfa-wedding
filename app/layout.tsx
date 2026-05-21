@@ -8,11 +8,11 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.video-alfa.hr'),
   title: {
-    default: 'Alfa Vjenčanja | Fotograf i Video Vjenčanja – Slavonija i Zagreb',
+    default: 'Video Alfa | Fotografiranje i snimanje vjenčanja',
     template: '%s | Alfa Vjenčanja',
   },
   description:
-    'Profesionalna fotografija i video snimanje vjenčanja u Slavoniji, Zagrebu i okolici. Više od 10 godina iskustva. Putujemo po cijeloj regiji. Paketi od 6 do cjelodnevnog snimanja.',
+    'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva.',
   keywords: [
     'fotograf vjenčanja Slavonija',
     'fotograf vjenčanja Zagreb',
@@ -24,32 +24,36 @@ export const metadata: Metadata = {
     'video snimanje vjenčanja',
     'Alfa Vjenčanja',
     'wedding photographer Croatia',
+    'fotografiranje',
+    'videosnimanje',
+    'fotografiranje vjenčanja',
+    'snimanje vjenčanja',
   ],
-  authors: [{ name: 'Alfa Vjenčanja', url: 'https://www.video-alfa.hr' }],
-  creator: 'Alfa Vjenčanja',
-  publisher: 'Alfa Vjenčanja',
+  authors: [{ name: 'Video Alfa', url: 'https://www.video-alfa.hr' }],
+  creator: 'Video Alfa',
+  publisher: 'Video Alfa',
   openGraph: {
     type: 'website',
     locale: 'hr_HR',
     url: 'https://www.video-alfa.hr',
-    siteName: 'Alfa Vjenčanja',
-    title: 'Alfa Vjenčanja | Fotograf Vjenčanja – Slavonija i Zagreb',
+    siteName: 'Video Alfa',
+    title: 'Video Alfa | Fotografiranje i snimanje vjenčanja',
     description:
-      'Profesionalna fotografija i video snimanje vjenčanja. Slavonija, Zagreb, cijela regija. Rezervirajte vaš datum.',
+      'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva. Rezervirajte vaš datum.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Alfa Vjenčanja – Profesionalna fotografija i video vjenčanja, Slavonija',
+        alt: 'Video Alfa | Fotografiranje i snimanje vjenčanja',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alfa Vjenčanja | Fotograf Vjenčanja – Slavonija i Zagreb',
+    title: 'Video Alfa | Fotografiranje i snimanje vjenčanja',
     description:
-      'Profesionalna fotografija i video snimanje vjenčanja u Slavoniji i Zagrebu.',
+      'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

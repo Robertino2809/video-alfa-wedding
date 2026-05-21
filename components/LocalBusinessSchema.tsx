@@ -1,11 +1,24 @@
+// ============================================================
+// KREIRATI KAO: components/LocalBusinessSchema.tsx
+// DODATI U: app/layout.tsx unutar <body> taga
+//
+// Primjer u layout.tsx:
+//   import LocalBusinessSchema from '@/components/LocalBusinessSchema'
+//   ...
+//   <body>
+//     <LocalBusinessSchema />
+//     {children}
+//   </body>
+// ============================================================
+
 export default function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': 'https://www.video-alfa.hr/#business',
-    name: 'Alfa Vjenčanja',
+    name: 'Video Alfa',
     description:
-      'Profesionalna fotografija i video snimanje vjenčanja u Slavoniji, Zagrebu i okolici. Više od 10 godina iskustva.',
+      'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva.',
     url: 'https://www.video-alfa.hr',
     telephone: '+38598660275',
     email: 'alfavjencanja@gmail.com',
@@ -30,27 +43,27 @@ export default function LocalBusinessSchema() {
       { '@type': 'City', name: 'Osijek' },
       { '@type': 'City', name: 'Slavonski Brod' },
       { '@type': 'City', name: 'Požega' },
+      { '@type': 'City', name: 'Đakovo' },
+      { '@type': 'City', name: 'Vinkovci' },
+      { '@type': 'City', name: 'Vukovar' },
       { '@type': 'City', name: 'Zagreb' },
+      { '@type': 'City', name: 'Rijeka' },
       { '@type': 'AdministrativeArea', name: 'Slavonija' },
       { '@type': 'AdministrativeArea', name: 'Virovitičko-podravska županija' },
       { '@type': 'AdministrativeArea', name: 'Osječko-baranjska županija' },
+      { '@type': 'AdministrativeArea', name: 'Brodsko-posavska županija' },
+      { '@type': 'AdministrativeArea', name: 'Požeško-slavonska županija' },
     ],
     sameAs: [
-      'https://www.facebook.com/alfa.vjencanja',
-      'https://www.instagram.com/alfavjencanja',
-      'https://www.youtube.com/@VIDEOALFA.',
+      'https://www.facebook.com/p/ALFAVjenčanja-100063607212380/',
+      'https://www.instagram.com/video.alfa/',
+      'https://www.youtube.com/@video-alfa',
     ],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '18:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: '09:00',
+        opens: '08:00',
         closes: '14:00',
       },
     ],
@@ -61,20 +74,23 @@ export default function LocalBusinessSchema() {
         {
           '@type': 'Offer',
           name: 'Essential',
-          description: 'Do 6 sati fotografiranja, 300+ obrađenih fotografija, online privatna galerija.',
-          seller: { '@type': 'Organization', name: 'Alfa Vjenčanja' },
+          description:
+            'Do 6 sati fotografiranja, 300+ obrađenih fotografija, online privatna galerija, dostava unutar 30 dana.',
+          seller: { '@type': 'Organization', name: 'Video Alfa' },
         },
         {
           '@type': 'Offer',
           name: 'Signature',
-          description: 'Do 10 sati fotografiranja, 600+ obrađenih fotografija, premium foto album, online galerija.',
-          seller: { '@type': 'Organization', name: 'Alfa Vjenčanja' },
+          description:
+            'Do 10 sati fotografiranja, 600+ obrađenih fotografija, premium foto album, online galerija, dostava unutar 30 dana.',
+          seller: { '@type': 'Organization', name: 'Video Alfa' },
         },
         {
           '@type': 'Offer',
           name: 'Exclusive',
-          description: 'Cjelodnevno fotografiranje, 800+ fotografija, luksuzni album, video snimanje, drone snimke.',
-          seller: { '@type': 'Organization', name: 'Alfa Vjenčanja' },
+          description:
+            'Cjelodnevno fotografiranje, 800+ obrađenih fotografija, luksuzni album, video snimanje, drone snimke, personalizirana ponuda.',
+          seller: { '@type': 'Organization', name: 'Video Alfa' },
         },
       ],
     },
@@ -88,23 +104,33 @@ export default function LocalBusinessSchema() {
     review: [
       {
         '@type': 'Review',
-        reviewBody: 'Od prvog susreta znali smo da smo u pravim rukama. Fotografije su nadmašile sva naša očekivanja.',
+        reviewBody:
+          'Od prvog susreta znali smo da smo u pravim rukama. Fotografije su nadmašile sva naša očekivanja.',
         author: { '@type': 'Person', name: 'Ana & Marko' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
       },
       {
         '@type': 'Review',
-        reviewBody: 'Diskretni, profesionalni i nevjerojatno talentirani. Svaki trenutak zabilježen je s osjećajem i stilom.',
+        reviewBody:
+          'Diskretni, profesionalni i nevjerojatno talentirani. Svaki trenutak zabilježen je s osjećajem i stilom.',
         author: { '@type': 'Person', name: 'Ivana & Luka' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
       },
     ],
-  };
+  }
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  );
+  )
 }
