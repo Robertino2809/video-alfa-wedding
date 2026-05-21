@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Background image */}
       <Image
         src="/images/webp/image94.webp"
-        alt="Vjenčanje"
+        alt="Fotografija vjenčanja – mladenci, Alfa Vjenčanja Slavonija"
         fill
         priority
         className="object-cover"

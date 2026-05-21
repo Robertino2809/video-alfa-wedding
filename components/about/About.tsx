@@ -19,7 +19,7 @@ export default function About() {
         >
           <Image
             src="/images/webp/image13.webp"
-            alt="Naš tim"
+            alt="Tim Alfa Vjenčanja – profesionalni fotografi vjenčanja iz Slatine"
             fill
             className="object-cover rounded-4xl"
           />

@@ -11,7 +11,7 @@ export default function PackagesHero() {
       {/* Background image */}
       <Image
         src="/images/webp/image21.webp"
-        alt="Paketi"
+        alt="Paketi fotografije vjenčanja – Alfa Vjenčanja Slavonija"
         fill
         priority
         className="object-cover"

@@ -28,7 +28,7 @@ export default function PackagesCTA() {
         </motion.h2>
 
         <Link
-          href="/kontakt"
+          href="/contact"
           className="uppercase tracking-[0.3em] text-sm border border-white px-8 py-3 hover:bg-white hover:text-black transition duration-500"
         >
           Kontaktirajte nas
