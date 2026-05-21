@@ -25,7 +25,7 @@ export default function Navbar() {
           <Image 
             width={200}
             height={40}
-            alt="logo"
+            alt="Alfa Vjenčanja logo – fotograf i video vjenčanja"
             src="/images/logo-alfa.png"
             priority
           />

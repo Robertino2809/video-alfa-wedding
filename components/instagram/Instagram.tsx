@@ -57,7 +57,7 @@ export default function Instagram() {
             >
               <Image
                 src={src}
-                alt="Instagram fotografija"
+                alt="Instagram fotografija vjenčanja – Alfa Vjenčanja Slavonija"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />

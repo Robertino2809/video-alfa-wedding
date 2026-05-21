@@ -23,7 +23,7 @@ export default function GalleryStatement() {
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
           src="/images/webp/image12.webp"
-          alt="Statement"
+          alt="Statement fotografija vjenčanja – Alfa Vjenčanja Slavonija"
           fill
           className="object-cover"
           priority

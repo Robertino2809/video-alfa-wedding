@@ -174,7 +174,7 @@ export default function GalleryGrid() {
             >
               <Image
                 src={images[selectedIndex]}
-                alt="Fullscreen"
+                alt="Fotografija vjenčanja u punoj veličini – Alfa Vjenčanja"
                 fill
                 className="object-contain"
                 priority
@@ -197,7 +197,7 @@ function ParallaxImage({ src, onClick }: any) {
     >
       <Image
         src={src}
-        alt=""
+        alt="Fotografija vjenčanja iz portfolija – Alfa Vjenčanja Slavonija"
         width={1000}
         height={1400}
         className="w-full h-auto object-cover"

@@ -14,13 +14,15 @@ function Counter({
   value: number;
   duration?: number;
 }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(value);
   const ref = useRef<HTMLSpanElement | null>(null);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+
+    setCount(0);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -40,6 +42,8 @@ function Counter({
 
             if (progress < 1) {
               requestAnimationFrame(animate);
+            } else {
+              setCount(value);
             }
           };
 
@@ -54,7 +58,11 @@ function Counter({
     return () => observer.disconnect();
   }, [value, duration]);
 
-  return <span ref={ref}>{count}</span>;
+  return (
+    <span ref={ref} data-target={value}>
+      {count}
+    </span>
+  );
 }
 
 /* =========================
@@ -63,8 +71,8 @@ function Counter({
 
 export default function StatsSection() {
   const stats = [
-    { value: 25, suffix: "+", label: "godina iskustva" },
-    { value: 700, suffix: "+", label: "zadovoljnih mladenaca" },
+    { value: 10, suffix: "+", label: "godina iskustva" },
+    { value: 500, suffix: "+", label: "zadovoljnih mladenaca" },
     { value: 1, suffix: " cilj", label: "savršeno zabilježen trenutak" },
     { value: "∞", suffix: "", label: "uhvaćenih iskrenih trenutaka" },
   ];

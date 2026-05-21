@@ -68,7 +68,7 @@ export default function PackagesList() {
             </ul>
 
             <Link
-              href="/kontakt"
+              href="/contact"
               className="uppercase tracking-[0.3em] text-sm border border-black px-8 py-3 hover:bg-black hover:text-white transition duration-500"
             >
               Zatraži ponudu

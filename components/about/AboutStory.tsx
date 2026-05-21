@@ -16,7 +16,7 @@ export default function AboutStory() {
         >
           <Image
             src="/images/about/about-1.jpg"
-            alt="Studio"
+            alt="Alfa Vjenčanja studio – fotograf vjenčanja iz Slatine, Slavonija"
             width={800}
             height={1000}
             className="object-cover w-full h-auto"

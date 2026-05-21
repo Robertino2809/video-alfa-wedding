@@ -17,7 +17,7 @@ export default function FullscreenImage() {
       >
         <Image
           src="/images/webp/image83.webp"
-          alt="Editorial fotografija"
+          alt="Elegantna fotografija vjenčanja – editorial stil, Alfa Vjenčanja"
           fill
           className="object-cover"
         />

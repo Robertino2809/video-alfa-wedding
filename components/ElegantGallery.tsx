@@ -27,7 +27,7 @@ export default function ElegantGallery() {
             >
               <Image
                 src={src}
-                alt="Wedding fotografija"
+                alt="Reportažna fotografija vjenčanja – spontani trenuci, Slavonija"
                 fill
                 sizes="100vw"
                 className="object-cover transition-transform duration-700 hover:scale-105"

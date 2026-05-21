@@ -11,7 +11,7 @@ export default function ContactHero() {
       {/* Background image */}
       <Image
         src="/images/webp/image53.webp"
-        alt="Kontakt"
+        alt="Kontakt Alfa Vjenčanja – rezervacija fotografa vjenčanja"
         fill
         priority
         className="object-cover"

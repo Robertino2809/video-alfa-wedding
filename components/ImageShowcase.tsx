@@ -22,7 +22,7 @@ export default function FinalShowcase() {
         >
           <Image
             src={src}
-            alt=""
+            alt="Fotografija vjenčanja – Alfa Vjenčanja Slavonija"
             fill
             className="object-cover object-center"
           />
