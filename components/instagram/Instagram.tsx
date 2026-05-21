@@ -67,7 +67,7 @@ export default function Instagram() {
 
         {/* CTA */}
         <motion.a
-          href="https://instagram.com"
+          href="https://www.instagram.com/video.alfa/"
           target="_blank"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

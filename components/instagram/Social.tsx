@@ -86,7 +86,7 @@ export default function Social() {
           </a>
 
           <a
-            href="https://www.facebook.com/p/ALFAVjenčanja-100063607212380/?locale=hr_HR"
+            href="https://www.facebook.com/p/ALFAVjenčanja-100063607212380/"
             target="_blank"
             className="flex items-center gap-3 uppercase tracking-[0.2em] text-sm hover:text-gray-600 transition"
           >
@@ -95,7 +95,7 @@ export default function Social() {
           </a>
 
           <a
-            href="https://www.youtube.com/@VIDEOALFA.?app=desktop"
+            href="https://www.youtube.com/@video-alfa"
             target="_blank"
             className="flex items-center gap-3 uppercase tracking-[0.2em] text-sm hover:text-gray-600 transition"
           >

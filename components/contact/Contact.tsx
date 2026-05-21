@@ -238,7 +238,7 @@ export default function Contact() {
           </a>
           <div className="flex justify-center gap-6 pt-2 text-sm uppercase tracking-[0.2em]">
             <a
-              href="https://www.facebook.com/profile.php?id=100063607212380"
+              href="https://www.facebook.com/p/ALFAVjenčanja-100063607212380/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-black transition"
@@ -246,7 +246,7 @@ export default function Contact() {
               Facebook
             </a>
             <a
-              href="https://www.instagram.com/alfavjencanja"
+              href="https://www.instagram.com/video.alfa/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-black transition"
