@@ -12,7 +12,7 @@ import {
 export default function GalleryGrid() {
   const containerRef = useRef(null);
 
-  const images = Array.from({ length: 50 }, (_, i) =>
+  const images = Array.from({ length: 66 }, (_, i) =>
     `/images/webp/image${i + 1}.webp`
   );
 
