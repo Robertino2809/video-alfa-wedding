@@ -75,7 +75,7 @@ export default function Pricing() {
               transition={{ duration: 1, delay: index * 0.2 }}
               viewport={{ once: true }}
               className={`p-12 border ${
-                service.highlight ? "border-black" : "border-gray-200"
+                index === 1 ? "border-black" : "border-gray-200"
               }`}
             >
               <h3 className="uppercase tracking-[0.3em] text-sm mb-8">
