@@ -4,36 +4,32 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Pricing() {
-  const packages = [
+  const services = [
     {
-      name: "Essential",
+      name: "Fotografija",
       features: [
-        "Do 6 sati fotografiranja",
-        "300+ obrađenih fotografija",
-        "Online privatna galerija",
-        "Cjenik šaljemo na upit",
+        "Kožni wedding book po izboru",
+        "Fotografiranje ceremonije i photo sessiona",
+        "Fotografije arhivirane na USB",
       ],
     },
     {
-      name: "Signature",
-      highlight: true,
+      name: "Video snimanje",
       features: [
-        "Do 10 sati fotografiranja",
-        "600+ obrađenih fotografija",
-        "Premium foto album",
-        "Online galerija",
-        "Cjenik šaljemo na upit",
+        "Uvodna špica i glavni spot",
+        "Odabir glazbe po želji mladenaca",
+        "Full HD 16:9 (widescreen)",
+        "Snimanje dronom dostupno uz odabrane pakete",
+        "Arhivirano na USB stick",
       ],
     },
     {
-      name: "Exclusive",
+      name: "Light Show",
       features: [
-        "Cjelodnevno fotografiranje",
-        "800+ obrađenih fotografija",
-        "Luksuzni album",
-        "Video snimanje",
-        "Drone snimke",
-        "Personalizirana ponuda",
+        "Ambijentalna rasvjeta prostora",
+        "Niski dim za prvi ples",
+        "Prskalice za prvi ples i tortu",
+        "Osvjetljavanje po mjeri vašeg prostora",
       ],
     },
   ];
@@ -50,7 +46,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="uppercase tracking-[0.4em] text-xs text-gray-500 mb-6"
         >
-          Paketi i ponude
+          Što nudimo
         </motion.p>
 
         {/* Heading */}
@@ -69,10 +65,9 @@ export default function Pricing() {
           </span>
         </motion.h2>
 
-        {/* Packages */}
+        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-16">
-
-          {packages.map((pkg, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 60 }}
@@ -80,29 +75,28 @@ export default function Pricing() {
               transition={{ duration: 1, delay: index * 0.2 }}
               viewport={{ once: true }}
               className={`p-12 border ${
-                pkg.highlight ? "border-black" : "border-gray-200"
+                service.highlight ? "border-black" : "border-gray-200"
               }`}
             >
               <h3 className="uppercase tracking-[0.3em] text-sm mb-8">
-                {pkg.name}
+                {service.name}
               </h3>
 
               <ul className="space-y-4 text-gray-600 mb-12">
-                {pkg.features.map((feature, i) => (
+                {service.features.map((feature, i) => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
 
               <Link
-                href="#kontakt"
+                href="/packages"
                 className="relative uppercase tracking-[0.3em] text-xs group"
               >
-                Zatraži ponudu
-                <span className="absolute left-0 -bottom-2 w-full h-[1px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                Istražite pakete
+                <span className="absolute left-0 -bottom-2 w-full h-[1px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </Link>
             </motion.div>
           ))}
-
         </div>
 
         {/* Final CTA */}
@@ -117,9 +111,8 @@ export default function Pricing() {
             href="/packages"
             className="relative inline-block uppercase tracking-[0.3em] text-sm group"
           >
-            Pogledajte detaljne pakete
-
-            <span className="absolute left-0 -bottom-2 w-full h-[1px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            Pogledajte sve pakete i ponude
+            <span className="absolute left-0 -bottom-2 w-full h-[1px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
           </Link>
         </motion.div>
 

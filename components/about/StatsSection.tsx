@@ -71,7 +71,7 @@ function Counter({
 
 export default function StatsSection() {
   const stats = [
-    { value: 10, suffix: "+", label: "godina iskustva" },
+    { value: 28, suffix: "+", label: "godina iskustva" },
     { value: 500, suffix: "+", label: "zadovoljnih mladenaca" },
     { value: 1, suffix: " cilj", label: "savršeno zabilježen trenutak" },
     { value: "∞", suffix: "", label: "uhvaćenih iskrenih trenutaka" },

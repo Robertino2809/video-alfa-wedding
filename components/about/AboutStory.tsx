@@ -15,11 +15,11 @@ export default function AboutStory() {
           viewport={{ once: true }}
         >
           <Image
-            src="/images/about/about-1.jpg"
-            alt="Alfa Vjenčanja studio – fotograf vjenčanja iz Slatine, Slavonija"
+            src="/images/camera.webp"
+            alt="Tim Video Alfa – profesionalni fotografi i snimatelji vjenčanja iz Slatine"
             width={800}
             height={1000}
-            className="object-cover w-full h-auto"
+            className="object-cover w-full h-auto rounded-4xl"
           />
         </motion.div>
 
@@ -31,19 +31,26 @@ export default function AboutStory() {
           className="text-gray-600 leading-relaxed space-y-6"
         >
           <p>
-            Godinama pratimo parove kroz jedan od najvažnijih dana u njihovom životu.
-            Naš pristup temelji se na mirnoći, diskreciji i osjećaju za pravi trenutak.
+            Video Alfa postoji od 1998. godine. Više od 28 godina pratimo parove
+            kroz jedan od najvažnijih dana u njihovom životu — i svaki put
+            pristupamo mu s jednakom pažnjom i odgovornošću.
           </p>
 
           <p>
-            Vjerujemo da fotografija mora zadržati emociju,
-            ali i estetiku koja traje. Svaki kadar pažljivo gradimo
-            kako bi ostao vrijedan i nakon mnogo godina.
+            Naš tim radi iz studija u Slatini, Braće Radić 13,
+            odakle pokrivamo vjenčanja po cijeloj Slavoniji i šire.
+            Fotografija, video snimanje, dron i light show — sve pod jednim krovom,
+            s jednim timom koji poznajete od prvog susreta do predaje materijala.
           </p>
 
           <p>
-            Naš cilj nije samo dokumentirati dan,
-            već stvoriti vizualnu priču koja ima dubinu i karakter.
+            Vjerujemo da dobra fotografija mora zadržati emociju,
+            ali i estetiku koja traje. Naš cilj nije samo dokumentirati dan —
+            već stvoriti vizualnu priču koju ćete gledati i za dvadeset godina.
+          </p>
+
+          <p className="text-sm text-gray-400">
+            Foto Studio Video Alfa · Braće Radić 13, Slatina
           </p>
         </motion.div>
 
