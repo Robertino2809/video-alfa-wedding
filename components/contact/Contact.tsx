@@ -98,7 +98,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="py-20 text-center"
           >
-            <p className="uppercase tracking-[0.4em] text-xs text-gray-400 mb-6">
+            <p className="uppercase tracking-[0.4em] text-xs text-gray-500 mb-6">
               Hvala vam
             </p>
             <p className="text-2xl font-light text-gray-700">
@@ -132,12 +132,13 @@ export default function Contact() {
 
             {/* Ime */}
             <div>
-              <label className="uppercase tracking-[0.3em] text-xs text-gray-500">
+              <label htmlFor="name" className="uppercase tracking-[0.3em] text-xs text-gray-500">
                 Ime i prezime
               </label>
               <input
                 type="text"
                 name="name"
+                id="name"
                 required
                 className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition"
               />
@@ -145,12 +146,13 @@ export default function Contact() {
 
             {/* Email */}
             <div>
-              <label className="uppercase tracking-[0.3em] text-xs text-gray-500">
+              <label htmlFor="email" className="uppercase tracking-[0.3em] text-xs text-gray-500">
                 Email
               </label>
               <input
                 type="email"
                 name="email"
+                id="email"
                 required
                 className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition"
               />
@@ -158,12 +160,13 @@ export default function Contact() {
 
             {/* Datum */}
             <div>
-              <label className="uppercase tracking-[0.3em] text-xs text-gray-500">
+              <label htmlFor="date" className="uppercase tracking-[0.3em] text-xs text-gray-500">
                 Datum vjenčanja
               </label>
               <input
                 type="text"
                 name="date"
+                id="date"
                 inputMode="numeric"
                 placeholder="DD.MM.GGGG"
                 value={date}
@@ -174,23 +177,25 @@ export default function Contact() {
 
             {/* Lokacija */}
             <div>
-              <label className="uppercase tracking-[0.3em] text-xs text-gray-500">
+              <label htmlFor="location" className="uppercase tracking-[0.3em] text-xs text-gray-500">
                 Lokacija vjenčanja
               </label>
               <input
                 type="text"
                 name="location"
+                id="location"
                 className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition"
               />
             </div>
 
             {/* Poruka */}
             <div>
-              <label className="uppercase tracking-[0.3em] text-xs text-gray-500">
+              <label htmlFor="message" className="uppercase tracking-[0.3em] text-xs text-gray-500">
                 Vaša poruka
               </label>
               <textarea
                 name="message"
+                id="message"
                 rows={4}
                 required
                 className="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-black transition resize-none"

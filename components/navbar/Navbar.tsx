@@ -58,6 +58,7 @@ export default function Navbar() {
         <button
           className="min-[1051px]:hidden"
           onClick={() => setOpen(!open)}
+          aria-label={open ? "Zatvori izbornik" : "Otvori izbornik"}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>

@@ -49,7 +49,7 @@ export default function AboutStory() {
             već stvoriti vizualnu priču koju ćete gledati i za dvadeset godina.
           </p>
 
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-500">
             Foto Studio Video Alfa · Braće Radić 13, Slatina
           </p>
         </motion.div>

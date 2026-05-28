@@ -199,6 +199,7 @@ export default function GalleryGrid() {
             <button
               onClick={() => setSelectedIndex(null)}
               className="absolute top-6 right-8 text-white text-4xl z-50 hover:opacity-70 transition"
+              aria-label="Zatvori sliku"
             >
               ×
             </button>

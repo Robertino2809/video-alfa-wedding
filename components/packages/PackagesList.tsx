@@ -150,7 +150,7 @@ export default function PackagesList() {
               className={`relative px-10 py-5 uppercase tracking-[0.4em] text-xs transition-colors duration-300 ${
                 activeTab === tab
                   ? "text-black"
-                  : "text-gray-400 hover:text-gray-600"
+                  : "text-gray-500 hover:text-gray-600"
               }`}
             >
               {tab === "foto" ? "Foto paketi" : "Video paketi"}
@@ -187,7 +187,7 @@ export default function PackagesList() {
                   className="border-b border-gray-200 py-16 relative"
                 >
                   {pkg.highlight && (
-                    <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-400">
+                    <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-500">
                       Popularno
                     </span>
                   )}
@@ -240,7 +240,7 @@ export default function PackagesList() {
               ))}
 
               {/* Shared note — jednom na kraju */}
-              <p className="text-xs text-gray-400 leading-relaxed pt-8 max-w-2xl">
+              <p className="text-xs text-gray-500 leading-relaxed pt-8 max-w-2xl">
                 {fotoSharedNote}
               </p>
             </motion.div>
@@ -264,7 +264,7 @@ export default function PackagesList() {
                   className="border-b border-gray-200 py-16 relative"
                 >
                   {pkg.highlight && (
-                    <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-400">
+                    <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-500">
                       Popularno
                     </span>
                   )}
@@ -321,7 +321,7 @@ export default function PackagesList() {
               ))}
 
               {/* Shared note — jednom na kraju */}
-              <p className="text-xs text-gray-400 leading-relaxed pt-8 max-w-2xl">
+              <p className="text-xs text-gray-500 leading-relaxed pt-8 max-w-2xl">
                 {videoSharedNote}
               </p>
             </motion.div>
