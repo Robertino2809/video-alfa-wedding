@@ -3,14 +3,14 @@ import ContactHero from "@/components/contact/ContactHero";
 import ContactForm from "@/components/contact/Contact";
 
 export const metadata: Metadata = {
-  title: 'Kontakt – Rezervirajte Datum Vjenčanja',
+  title: 'Kontakt – Video Alfa, Braće Radić 13, Slatina',
   description:
-    'Kontaktirajte Alfa Vjenčanja. Tel: +385 98 660 275. Fotografiramo u Slavoniji, Zagrebu i regiji. Provjerite dostupnost vašeg datuma i zatražite ponudu.',
-  alternates: { canonical: 'https://www.video-alfa.hr/contact' },
+    'Provjerite je li vaš datum slobodan. Nazovite +385 98 660 275 ili pošaljite upit.',
+  alternates: { canonical: 'https://www.video-alfa.hr/contact/' },
   openGraph: {
-    title: 'Kontakt | Alfa Vjenčanja – Rezervirajte Datum',
-    description: 'Provjerite dostupnost vašeg datuma. Tel: +385 98 660 275.',
-    url: 'https://www.video-alfa.hr/contact',
+    title: 'Kontakt – Video Alfa, Braće Radić 13, Slatina',
+    description: 'Provjerite je li vaš datum slobodan. Tel: +385 98 660 275.',
+    url: 'https://www.video-alfa.hr/contact/',
   },
 };
 

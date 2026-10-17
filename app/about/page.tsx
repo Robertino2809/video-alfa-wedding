@@ -5,14 +5,14 @@ import AboutValues from "@/components/about/AboutValues";
 import StatsSection from "@/components/about/StatsSection";
 
 export const metadata: Metadata = {
-  title: 'O Nama – Tim i Pristup Fotografiji Vjenčanja',
+  title: 'O nama – foto studio Video Alfa, Slatina od 1998.',
   description:
-    'Upoznajte tim Alfa Vjenčanja. Više od 10 godina fotografiramo vjenčanja u Slavoniji i široj regiji s naglaskom na autentične emocije i bezvremensku estetiku.',
-  alternates: { canonical: 'https://www.video-alfa.hr/about' },
+    'Obiteljski foto i video studio iz Slatine. Fotografiranje i video snimanje vjenčanja od 1998., s jednim timom od prvog dogovora do predaje materijala.',
+  alternates: { canonical: 'https://www.video-alfa.hr/about/' },
   openGraph: {
-    title: 'O Nama | Alfa Vjenčanja – Fotograf Vjenčanja',
-    description: 'Više od 10 godina fotografiramo vjenčanja u Slavoniji i šire. Diskrecija, estetika, povjerenje.',
-    url: 'https://www.video-alfa.hr/about',
+    title: 'O nama – foto studio Video Alfa, Slatina od 1998.',
+    description: 'Fotografiranje i video snimanje vjenčanja od 1998.',
+    url: 'https://www.video-alfa.hr/about/',
   },
 };
 

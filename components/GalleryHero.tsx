@@ -10,7 +10,7 @@ export default function GalleryHero() {
       {/* Background image */}
       <Image
         src="/images/webp/image26.webp"
-        alt="Galerija fotografija vjenčanja – Alfa Vjenčanja Slavonija"
+        alt="Mladenci na fotografiranju vjenčanja"
         fill
         priority
         className="object-cover"

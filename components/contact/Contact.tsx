@@ -239,7 +239,7 @@ export default function Contact() {
             Mobitel: +385 98 660 275
           </a>
           <a href="tel:+38533553553" className="block hover:text-black transition">
-            Telefon: +385 033 553 553
+            Telefon: +385 33 553 553
           </a>
           <div className="flex justify-center gap-6 pt-2 text-sm uppercase tracking-[0.2em]">
             <a
