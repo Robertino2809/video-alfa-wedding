@@ -5,13 +5,14 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
-export default function Navbar() {
+export default function Navbar({ showVjencanja = false }: { showVjencanja?: boolean }) {
   const [open, setOpen] = useState(false);
 
   const links = [
     { name: "Početna", href: "/" },
     { name: "O nama", href: "/about" },
     { name: "Galerija", href: "/gallery" },
+    ...(showVjencanja ? [{ name: "Vjenčanja", href: "/vjencanja" }] : []),
     { name: "Paketi", href: "/packages" },
     { name: "Kontakt", href: "/contact" },
   ];

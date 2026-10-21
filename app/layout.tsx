@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/Footer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import { hasStories } from "@/lib/vjencanja";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.video-alfa.hr'),
@@ -66,7 +67,7 @@ export default function RootLayout({
     <html lang="hr">
       <body className={`${montserrat.className} antialiased`}>
         <LocalBusinessSchema />
-        <Navbar />
+        <Navbar showVjencanja={hasStories()} />
         {children}
         <Footer />
       </body>
