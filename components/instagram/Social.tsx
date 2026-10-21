@@ -35,15 +35,26 @@ export default function Social() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-10"
         >
           <span className="font-[var(--font-pinyon)] text-6xl md:text-7xl block mb-3">
-            Trenuci
-          </span>
+            Pratite
+          </span>{" "}
           <span className="text-3xl md:text-5xl font-light">
-            koje dijelimo svakodnevno
+            nas
           </span>
         </motion.h2>
+
+        {/* Text */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          viewport={{ once: true }}
+          className="text-gray-600 max-w-2xl mx-auto mb-20 leading-relaxed"
+        >
+          Najnovija vjenčanja prvo objavimo na Instagramu.
+        </motion.p>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

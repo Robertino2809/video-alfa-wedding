@@ -44,11 +44,10 @@ export default function AboutHero() {
             <span
               className={`font-sans text-4xl md:text-6xl lg:text-8xl font-light block mb-4`}
             >
-              Naša priča
-            </span>
-
+              Obiteljski studio
+            </span>{" "}
             <span className="font-sans text-3xl md:text-5xl font-light">
-              iza svakog kadra
+              iz Slatine
             </span>
           </motion.h1>
 
@@ -67,8 +66,8 @@ export default function AboutHero() {
             transition={{ delay: 1, duration: 1 }}
             className="text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Vjerujemo da svaka ljubavna priča zaslužuje biti
-            ispričana s elegancijom, mirnoćom i osjećajem za detalj.
+            Vjenčanja snimamo od 1998. Fotografija, video, dron i light show,
+            sve iz jednog studija.
           </motion.p>
 
         </div>

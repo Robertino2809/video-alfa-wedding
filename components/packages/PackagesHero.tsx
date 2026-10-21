@@ -42,11 +42,10 @@ export default function PackagesHero() {
             className="leading-tight"
           >
             <span className="font-sans text-4xl md:text-6xl lg:text-8xl font-light block mb-4">
-              Odaberite
-            </span>
-
+              Paketi
+            </span>{" "}
             <span className="font-sans text-3xl md:text-5xl font-light">
-              savršeni paket za vaš dan
+              za fotografiranje i snimanje vjenčanja
             </span>
           </motion.h1>
 
@@ -65,9 +64,10 @@ export default function PackagesHero() {
             transition={{ delay: 1, duration: 1 }}
             className="text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Svaki paket pažljivo je osmišljen kako bi odgovarao
-            različitim željama, stilovima i budžetima,
-            uz istu razinu elegancije i profesionalnosti.
+            Šest foto i šest video paketa, od snimanja ceremonije do cijelog
+            dana s dvije kamere i dronom. Razlikuju se po veličini wedding
+            booka i koliko dugo ostajemo s vama. Ako vam nijedan ne odgovara
+            točno, javite se pa ćemo složiti ponudu.
           </motion.p>
 
         </div>

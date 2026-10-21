@@ -20,7 +20,7 @@ export default function Footer() {
           <h2
             className={`font-sans text-4xl md:text-4xl lg:text-4xl mb-12`}
           >
-            Započnimo vašu priču
+            Imate datum? Javite nam se.
           </h2>
 
           <Link
@@ -42,8 +42,8 @@ export default function Footer() {
             <h3 className="uppercase tracking-[0.3em] text-xs mb-6 text-white">
               Studio
             </h3>
-            <p>Alfa Vjenčanja</p>
-            <p>Bezvremenska fotografija</p>
+            <p>Foto studio Video Alfa</p>
+            <p>Braće Radić 13, Slatina</p>
           </div>
 
           {/* Contact */}
@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-20 text-center text-xs text-white/40">
-          © {new Date().getFullYear()} Alfa Vjenčanja. Sva prava pridržana.
+          © {new Date().getFullYear()} Video Alfa. Sva prava pridržana.
         </div>
 
       </div>

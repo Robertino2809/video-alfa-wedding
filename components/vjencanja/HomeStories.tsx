@@ -62,7 +62,7 @@ export default function HomeStories({
             viewport={{ once: true }}
             className="text-gray-600 max-w-2xl mx-auto leading-relaxed"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            Svako vjenčanje ima svoju priču. Ovdje ih pričamo do kraja, od priprema do prvog plesa.
           </motion.p>
         </div>
 

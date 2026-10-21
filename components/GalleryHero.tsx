@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function GalleryHero() {
+export default function GalleryHero({ showVjencanja = false }: { showVjencanja?: boolean }) {
   return (
     <section className="relative h-screen w-full overflow-hidden">
 
@@ -43,11 +43,10 @@ export default function GalleryHero() {
             <span
               className="font-sans text-4xl md:text-6xl lg:text-8xl font-light block mb-4"
             >
-              Trenuci
-            </span>
-
+              Galerija
+            </span>{" "}
             <span className="font-sans text-3xl md:text-5xl font-light">
-              koji ostaju zauvijek
+              fotografija vjenčanja
             </span>
           </motion.h1>
 
@@ -66,9 +65,9 @@ export default function GalleryHero() {
             transition={{ delay: 1, duration: 1 }}
             className="text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Svako vjenčanje nosi svoju atmosferu, emociju i energiju.
-            Ovdje izdvajamo trenutke koji pričaju priču o ljubavi,
-            eleganciji i bezvremenskoj estetici.
+            Fotografije s vjenčanja koja smo snimali proteklih sezona.
+            {showVjencanja &&
+              " Cijele priče s pojedinih vjenčanja nađite u rubrici Vjenčanja."}
           </motion.p>
 
         </div>
