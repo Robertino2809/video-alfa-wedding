@@ -9,6 +9,8 @@ import Hero from "@/components/hero/Hero";
 import Social from "@/components/instagram/Social";
 import Pricing from "@/components/pricing/Pricing";
 import Testimonials from "@/components/testimonials/Testimonials";
+import HomeStories from "@/components/vjencanja/HomeStories";
+import { getStories } from "@/lib/vjencanja";
 
 export const metadata: Metadata = {
   title: 'Fotograf i snimatelj vjenčanja | Video Alfa Slatina',
@@ -23,12 +25,20 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  // 0 priča → ništa; 1–2 → ispod pregleda galerije; 3+ → umjesto pregleda galerije.
+  const stories = getStories()
+    .slice(0, 3)
+    .map(({ slug, title, city, cover, coverAlt, description }) => ({
+      slug, title, city, cover, coverAlt, description,
+    }));
+
   return (
     <div>
       <Hero />
       <About />
       <FullscreenImage />
-      <GalleryPreview />
+      {stories.length < 3 && <GalleryPreview />}
+      {stories.length > 0 && <HomeStories stories={stories} followsPreview={stories.length < 3} />}
       <Pricing />
       <FullscreenImage2 />
       <Testimonials />
