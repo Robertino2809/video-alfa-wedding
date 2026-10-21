@@ -32,9 +32,9 @@ export default function Navbar({ showVjencanja = false }: { showVjencanja?: bool
           />
         </Link>
 
-        {/* Desktop Navigation (iznad 1050px) */}
-        <nav className="hidden min-[1051px]:flex items-center gap-10 text-sm uppercase tracking-[0.15em]">
-          {links.map((link) => (
+        {/* Desktop Navigation (od 1220px) */}
+        <nav className="hidden min-[1220px]:flex items-center gap-10 text-sm uppercase tracking-[0.15em]">
+          {links.filter((link) => link.href !== "/").map((link) => (
             <Link
               key={link.name}
               href={link.href}
@@ -46,7 +46,7 @@ export default function Navbar({ showVjencanja = false }: { showVjencanja?: bool
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden min-[1051px]:block">
+        <div className="hidden min-[1220px]:block">
           <Link
             href="#kontakt"
             className="border border-white px-6 py-2 text-sm uppercase tracking-[0.2em] hover:bg-white hover:text-black transition duration-500"
@@ -55,9 +55,9 @@ export default function Navbar({ showVjencanja = false }: { showVjencanja?: bool
           </Link>
         </div>
 
-        {/* Mobile Button (1050px i manje) */}
+        {/* Mobile Button (ispod 1220px) */}
         <button
-          className="min-[1051px]:hidden"
+          className="min-[1220px]:hidden"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Zatvori izbornik" : "Otvori izbornik"}
         >
@@ -68,7 +68,7 @@ export default function Navbar({ showVjencanja = false }: { showVjencanja?: bool
 
       {/* Mobile Menu */}
       {open && (
-        <div className="min-[1051px]:hidden bg-black text-white px-6 pb-8 space-y-6 uppercase tracking-[0.2em] text-sm">
+        <div className="min-[1220px]:hidden bg-black text-white px-6 pb-8 space-y-6 uppercase tracking-[0.2em] text-sm">
           {links.map((link) => (
             <Link
               key={link.name}
