@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-20 text-center text-xs text-white/40">
+        <div className="mt-20 text-center text-xs text-white/50">
           © {new Date().getFullYear()} Video Alfa. Sva prava pridržana.
         </div>
 
