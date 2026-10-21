@@ -12,9 +12,15 @@ export type StoryCard = {
   coverAlt: string;
 };
 
-export default function StoryCards({ stories }: { stories: StoryCard[] }) {
+export default function StoryCards({
+  stories,
+  className = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+}: {
+  stories: StoryCard[];
+  className?: string;
+}) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+    <div className={`grid ${className} gap-x-8 gap-y-16`}>
       {stories.map((story, index) => (
         <motion.div
           key={story.slug}
