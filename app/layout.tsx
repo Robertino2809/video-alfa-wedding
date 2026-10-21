@@ -8,38 +8,22 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.video-alfa.hr'),
   title: {
-    default: 'Video Alfa | Fotografiranje i snimanje vjenčanja',
-    template: '%s | Alfa Vjenčanja',
+    default: 'Fotograf i snimatelj vjenčanja | Video Alfa Slatina',
+    template: '%s',
   },
   description:
-    'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva.',
-  keywords: [
-    'fotograf vjenčanja Slavonija',
-    'fotograf vjenčanja Zagreb',
-    'fotografija vjenčanja Hrvatska',
-    'snimanje vjenčanja Slavonija',
-    'fotograf vjenčanja Osijek',
-    'fotograf vjenčanja Virovitica',
-    'fotograf vjenčanja Slatina',
-    'video snimanje vjenčanja',
-    'Alfa Vjenčanja',
-    'wedding photographer Croatia',
-    'fotografiranje',
-    'videosnimanje',
-    'fotografiranje vjenčanja',
-    'snimanje vjenčanja',
-  ],
+    'Fotografiranje i video snimanje vjenčanja, 28+ godina iskustva. Wedding book, dron i light show.',
   authors: [{ name: 'Video Alfa', url: 'https://www.video-alfa.hr' }],
   creator: 'Video Alfa',
   publisher: 'Video Alfa',
   openGraph: {
     type: 'website',
     locale: 'hr_HR',
-    url: 'https://www.video-alfa.hr',
+    url: 'https://www.video-alfa.hr/',
     siteName: 'Video Alfa',
-    title: 'Video Alfa | Fotografiranje i snimanje vjenčanja',
+    title: 'Fotograf i snimatelj vjenčanja | Video Alfa Slatina',
     description:
-      'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva. Rezervirajte vaš datum.',
+      'Fotografiranje i video snimanje vjenčanja, 28+ godina iskustva.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -51,9 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Video Alfa | Fotografiranje i snimanje vjenčanja',
-    description:
-      'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva.',
+    title: 'Fotograf i snimatelj vjenčanja | Video Alfa Slatina',
+    description: 'Fotografiranje i video snimanje vjenčanja od 1998.',
     images: ['/images/og-image.jpg'],
   },
   robots: {
@@ -67,9 +50,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://www.video-alfa.hr',
+    canonical: 'https://www.video-alfa.hr/',
     languages: {
-      'hr-HR': 'https://www.video-alfa.hr',
+      'hr-HR': 'https://www.video-alfa.hr/',
     },
   },
 };

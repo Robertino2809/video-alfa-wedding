@@ -1,16 +1,5 @@
-// ============================================================
-// KREIRATI KAO: components/LocalBusinessSchema.tsx
-// DODATI U: app/layout.tsx unutar <body> taga
-//
-// Primjer u layout.tsx:
-//   import LocalBusinessSchema from '@/components/LocalBusinessSchema'
-//   ...
-//   <body>
-//     <LocalBusinessSchema />
-//     {children}
-//   </body>
-// ============================================================
-
+// LocalBusiness JSON-LD za Video Alfa.
+// Renderira se iz app/layout.tsx unutar <body> taga kao <script type="application/ld+json">.
 export default function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
@@ -18,8 +7,8 @@ export default function LocalBusinessSchema() {
     '@id': 'https://www.video-alfa.hr/#business',
     name: 'Video Alfa',
     description:
-      'Profesionalna fotografija i video snimanje vjenčanja. Više od 25 godina iskustva.',
-    url: 'https://www.video-alfa.hr',
+      'Foto i video studio iz Slatine. Fotografiranje i video snimanje vjenčanja, 28+ godina iskustva.',
+    url: 'https://www.video-alfa.hr/',
     telephone: '+38598660275',
     email: 'alfavjencanja@gmail.com',
     image: 'https://www.video-alfa.hr/images/og-image.jpg',
@@ -38,21 +27,8 @@ export default function LocalBusinessSchema() {
       longitude: 17.7003,
     },
     areaServed: [
-      { '@type': 'City', name: 'Slatina' },
-      { '@type': 'City', name: 'Virovitica' },
-      { '@type': 'City', name: 'Osijek' },
-      { '@type': 'City', name: 'Slavonski Brod' },
-      { '@type': 'City', name: 'Požega' },
-      { '@type': 'City', name: 'Đakovo' },
-      { '@type': 'City', name: 'Vinkovci' },
-      { '@type': 'City', name: 'Vukovar' },
-      { '@type': 'City', name: 'Zagreb' },
-      { '@type': 'City', name: 'Rijeka' },
-      { '@type': 'AdministrativeArea', name: 'Slavonija' },
-      { '@type': 'AdministrativeArea', name: 'Virovitičko-podravska županija' },
-      { '@type': 'AdministrativeArea', name: 'Osječko-baranjska županija' },
-      { '@type': 'AdministrativeArea', name: 'Brodsko-posavska županija' },
-      { '@type': 'AdministrativeArea', name: 'Požeško-slavonska županija' },
+      { '@type': 'Country', name: 'Croatia' },
+      { '@type': 'Country', name: 'Germany' },
     ],
     sameAs: [
       'https://www.facebook.com/p/ALFAVjenčanja-100063607212380/',

@@ -11,14 +11,14 @@ import Pricing from "@/components/pricing/Pricing";
 import Testimonials from "@/components/testimonials/Testimonials";
 
 export const metadata: Metadata = {
-  title: 'Foto studio Video Alfa - Slatina',
+  title: 'Fotograf i snimatelj vjenčanja | Video Alfa Slatina',
   description:
-    'Alfa Vjenčanja – profesionalna fotografija i video snimanje vjenčanja u Slavoniji, Zagrebu i okolici. Više od 10 godina iskustva, 300–800+ fotografija po paketu. Zatražite besplatnu ponudu.',
-  alternates: { canonical: 'https://www.video-alfa.hr' },
+    'Fotografiranje i video snimanje vjenčanja od 1998. Wedding book, dron i light show. Zatražite ponudu za svoj datum.',
+  alternates: { canonical: 'https://www.video-alfa.hr/' },
   openGraph: {
-    title: 'Alfa Vjenčanja | Fotograf Vjenčanja – Slavonija i Zagreb',
-    description: 'Profesionalna fotografija i video snimanje vjenčanja. Slavonija, Zagreb, cijela regija.',
-    url: 'https://www.video-alfa.hr',
+    title: 'Fotograf i snimatelj vjenčanja | Video Alfa Slatina',
+    description: 'Fotografiranje i video snimanje vjenčanja od 1998.',
+    url: 'https://www.video-alfa.hr/',
   },
 };
 

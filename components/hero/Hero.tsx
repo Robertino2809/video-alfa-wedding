@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Background image */}
       <Image
         src="/images/webp/image94.webp"
-        alt="Fotografija vjenčanja – mladenci, Alfa Vjenčanja Slavonija"
+        alt="Mladenci na dan vjenčanja"
         fill
         priority
         className="object-cover"
@@ -29,11 +29,19 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className={`text-4xl md:text-6xl lg:text-6xl font-light leading-tight`}
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight`}
           >
-            Dobrodošli u naš studio – <br />
-            gdje trenuci postaju uspomene
+            Fotografiranje i video snimanje vjenčanja
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="mt-6 text-base sm:text-lg md:text-xl font-light text-white/90"
+          >
+            Dobrodošli u naš studio – gdje trenuci postaju uspomene
+          </motion.p>
 
           <motion.div
             initial={{ width: 0 }}

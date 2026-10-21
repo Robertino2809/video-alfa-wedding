@@ -4,14 +4,14 @@ import GalleryGrid from "@/components/GalleryGrid";
 import GalleryIntro from "@/components/GalleryIntro";
 
 export const metadata: Metadata = {
-  title: 'Galerija Fotografija Vjenčanja – Portfolio',
+  title: 'Galerija fotografija vjenčanja | Video Alfa',
   description:
-    'Pogledajte portfolio fotografija vjenčanja studija Alfa Vjenčanja. Autentični trenuci, elegantna estetika. Lokacije po cijeloj Slavoniji, Zagrebu i regiji.',
-  alternates: { canonical: 'https://www.video-alfa.hr/gallery' },
+    'Odabrane fotografije s vjenčanja koja smo snimali. Pogledajte naš stil prije nego rezervirate datum.',
+  alternates: { canonical: 'https://www.video-alfa.hr/gallery/' },
   openGraph: {
-    title: 'Galerija | Alfa Vjenčanja – Fotografija Vjenčanja',
-    description: 'Portfolio fotografija vjenčanja – Slavonija, Zagreb i regija.',
-    url: 'https://www.video-alfa.hr/gallery',
+    title: 'Galerija fotografija vjenčanja | Video Alfa',
+    description: 'Portfolio fotografija vjenčanja studija Video Alfa.',
+    url: 'https://www.video-alfa.hr/gallery/',
   },
 };
 

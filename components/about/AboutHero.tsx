@@ -11,7 +11,7 @@ export default function AboutHero() {
       {/* Background image */}
       <Image
         src="/images/webp/image57.webp"
-        alt="Alfa Vjenčanja studio – fotografija vjenčanja Slavonija"
+        alt="Foto studio Video Alfa u Slatini"
         fill
         priority
         className="object-cover"

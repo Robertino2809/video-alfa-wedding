@@ -20,7 +20,7 @@ export default function GalleryIntro() {
         </motion.p>
 
         {/* Heading */}
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
@@ -28,13 +28,13 @@ export default function GalleryIntro() {
           className="leading-tight mb-10"
         >
           <span className={`font-sans text-6xl md:text-7xl block mb-4`}>
-            Trenutci
+            Trenuci
           </span>
 
           <span className="font-sans text-3xl md:text-5xl font-light">
             koji ostaju zauvijek
           </span>
-        </motion.h1>
+        </motion.h2>
 
         {/* Text */}
         <motion.p

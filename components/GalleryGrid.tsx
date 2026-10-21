@@ -9,83 +9,89 @@ import {
   AnimatePresence,
 } from "framer-motion";
 
+type GalleryImage = {
+  src: string;
+  alt: string;
+  location?: string;
+};
+
 export default function GalleryGrid() {
   const containerRef = useRef(null);
 
-  const images = [
-    "/images/webp/image1.webp",
-    "/images/webp/image2.webp",
-    "/images/webp/image3.webp",
-    "/images/webp/image5.webp",
-    "/images/webp/image6.webp",
-    "/images/webp/image7.webp",
-    "/images/webp/image8.webp",
-    "/images/webp/image9.webp",
-    "/images/webp/image10.webp",
-    "/images/webp/image12.webp",
-    "/images/webp/image13.webp",
-    "/images/webp/image17.webp",
-    "/images/webp/image19.webp",
-    "/images/webp/image20.webp",
-    "/images/webp/image21.webp",
-    "/images/webp/image22.webp",
-    "/images/webp/image23.webp",
-    "/images/webp/image24.webp",
-    "/images/webp/image26.webp",
-    "/images/webp/image27.webp",
-    "/images/webp/image28.webp",
-    "/images/webp/image29.webp",
-    "/images/webp/image30.webp",
-    "/images/webp/image31.webp",
-    "/images/webp/image32.webp",
-    "/images/webp/image34.webp",
-    "/images/webp/image35.webp",
-    "/images/webp/image36.webp",
-    "/images/webp/image38.webp",
-    "/images/webp/image39.webp",
-    "/images/webp/image41.webp",
-    "/images/webp/image44.webp",
-    "/images/webp/image46.webp",
-    "/images/webp/image48.webp",
-    "/images/webp/image49.webp",
-    "/images/webp/image50.webp",
-    "/images/webp/image52.webp",
-    "/images/webp/image53.webp",
-    "/images/webp/image55.webp",
-    "/images/webp/image57.webp",
-    "/images/webp/image58.webp",
-    "/images/webp/image59.webp",
-    "/images/webp/image61.webp",
-    "/images/webp/image62.webp",
-    "/images/webp/image63.webp",
-    "/images/webp/image64.webp",
-    "/images/webp/image67.webp",
-    "/images/webp/image70.webp",
-    "/images/webp/image72.webp",
-    "/images/webp/image73.webp",
-    "/images/webp/image74.webp",
-    "/images/webp/image75.webp",
-    "/images/webp/image76.webp",
-    "/images/webp/image79.webp",
-    "/images/webp/image80.webp",
-    "/images/webp/image81.webp",
-    "/images/webp/image83.webp",
-    "/images/webp/image84.webp",
-    "/images/webp/image85.webp",
-    "/images/webp/image86.webp",
-    "/images/webp/image87.webp",
-    "/images/webp/image88.webp",
-    "/images/webp/image90.webp",
-    "/images/webp/image92.webp",
-    "/images/webp/image94.webp",
-    "/images/webp/image95.webp",
+  const images: GalleryImage[] = [
+    { src: "/images/webp/image1.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image2.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image3.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image5.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image6.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image7.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image8.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image9.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image10.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image12.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image13.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image17.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image19.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image20.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image21.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image22.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image23.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image24.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image26.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image27.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image28.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image29.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image30.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image31.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image32.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image34.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image35.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image36.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image38.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image39.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image41.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image44.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image46.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image48.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image49.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image50.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image52.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image53.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image55.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image57.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image58.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image59.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image61.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image62.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image63.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image64.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image67.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image70.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image72.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image73.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image74.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image75.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image76.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image79.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image80.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image81.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image83.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image84.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image85.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image86.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image87.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image88.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image90.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image92.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image94.webp", alt: "Fotografija vjenčanja" },
+    { src: "/images/webp/image95.webp", alt: "Fotografija vjenčanja" },
   ];
 
   // 3 kolone raspored
   const columns = useMemo(() => {
-    const col1: string[] = [];
-    const col2: string[] = [];
-    const col3: string[] = [];
+    const col1: GalleryImage[] = [];
+    const col2: GalleryImage[] = [];
+    const col3: GalleryImage[] = [];
 
     images.forEach((img, i) => {
       if (i % 3 === 0) col1.push(img);
@@ -146,12 +152,12 @@ export default function GalleryGrid() {
         className="max-w-[2000px] mx-auto px-8 py-40 grid grid-cols-1 md:grid-cols-3 gap-2"
       >
         <motion.div style={{ y: y1 }} className="space-y-2">
-          {columns[0].map((src) => {
-            const index = images.indexOf(src);
+          {columns[0].map((image) => {
+            const index = images.indexOf(image);
             return (
               <ParallaxImage
                 key={index}
-                src={src}
+                image={image}
                 onClick={() => setSelectedIndex(index)}
               />
             );
@@ -159,12 +165,12 @@ export default function GalleryGrid() {
         </motion.div>
 
         <motion.div style={{ y: y2 }} className="space-y-2">
-          {columns[1].map((src) => {
-            const index = images.indexOf(src);
+          {columns[1].map((image) => {
+            const index = images.indexOf(image);
             return (
               <ParallaxImage
                 key={index}
-                src={src}
+                image={image}
                 onClick={() => setSelectedIndex(index)}
               />
             );
@@ -172,12 +178,12 @@ export default function GalleryGrid() {
         </motion.div>
 
         <motion.div style={{ y: y3 }} className="space-y-2">
-          {columns[2].map((src) => {
-            const index = images.indexOf(src);
+          {columns[2].map((image) => {
+            const index = images.indexOf(image);
             return (
               <ParallaxImage
                 key={index}
-                src={src}
+                image={image}
                 onClick={() => setSelectedIndex(index)}
               />
             );
@@ -239,8 +245,8 @@ export default function GalleryGrid() {
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src={images[selectedIndex]}
-                alt="Fotografija vjenčanja u punoj veličini – Alfa Vjenčanja"
+                src={images[selectedIndex].src}
+                alt={images[selectedIndex].alt}
                 fill
                 className="object-contain"
                 priority
@@ -253,7 +259,13 @@ export default function GalleryGrid() {
   );
 }
 
-function ParallaxImage({ src, onClick }: any) {
+function ParallaxImage({
+  image,
+  onClick,
+}: {
+  image: GalleryImage;
+  onClick: () => void;
+}) {
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
@@ -262,8 +274,8 @@ function ParallaxImage({ src, onClick }: any) {
       onClick={onClick}
     >
       <Image
-        src={src}
-        alt="Fotografija vjenčanja iz portfolija – Alfa Vjenčanja Slavonija"
+        src={image.src}
+        alt={image.alt}
         width={1000}
         height={1400}
         className="w-full h-auto object-cover"

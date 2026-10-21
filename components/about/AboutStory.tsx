@@ -37,8 +37,7 @@ export default function AboutStory() {
           </p>
 
           <p>
-            Naš tim radi iz studija u Slatini, Braće Radić 13,
-            odakle pokrivamo vjenčanja po cijeloj Slavoniji i šire.
+            Naš tim radi iz studija u Slatini, Braće Radić 13.
             Fotografija, video snimanje, dron i light show — sve pod jednim krovom,
             s jednim timom koji poznajete od prvog susreta do predaje materijala.
           </p>
