@@ -32,7 +32,7 @@ export default function Home() {
     }));
 
   return (
-    <div>
+    <main>
       <Hero />
       <About />
       <FullscreenImage />
@@ -43,6 +43,6 @@ export default function Home() {
       <Contact />
       <ElegantGallery />
       <Social />
-    </div>
+    </main>
   );
 }

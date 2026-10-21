@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { motion } from "framer-motion";
 
 export default function FullscreenImage() {
@@ -15,12 +15,7 @@ export default function FullscreenImage() {
         viewport={{ once: true }}
         className="absolute inset-0"
       >
-        <Image
-          src="/images/webp/DSC_8883.webp"
-          alt="Fotografija vjenčanja"
-          fill
-          className="object-cover"
-        />
+        <ResponsiveImage src="/images/webp/DSC_8883.webp" alt="Fotografija vjenčanja" />
       </motion.div>
 
       {/* Optional soft overlay */}

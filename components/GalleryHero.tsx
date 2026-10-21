@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { motion } from "framer-motion";
 
 export default function GalleryHero({ showVjencanja = false }: { showVjencanja?: boolean }) {
@@ -8,13 +8,7 @@ export default function GalleryHero({ showVjencanja = false }: { showVjencanja?:
     <section className="relative h-screen w-full overflow-hidden">
 
       {/* Background image */}
-      <Image
-        src="/images/webp/image26.webp"
-        alt="Mladenci na fotografiranju vjenčanja"
-        fill
-        priority
-        className="object-cover"
-      />
+      <ResponsiveImage src="/images/webp/image26.webp" alt="Mladenci na fotografiranju vjenčanja" priority />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
@@ -25,8 +19,8 @@ export default function GalleryHero({ showVjencanja = false }: { showVjencanja?:
 
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ y: 12 }}
+            animate={{ y: 0 }}
             transition={{ duration: 1 }}
             className="uppercase tracking-[0.4em] text-xs mb-6"
           >
@@ -35,8 +29,8 @@ export default function GalleryHero({ showVjencanja = false }: { showVjencanja?:
 
           {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 16 }}
+            animate={{ y: 0 }}
             transition={{ duration: 1.2 }}
             className="leading-tight"
           >
@@ -60,8 +54,8 @@ export default function GalleryHero({ showVjencanja = false }: { showVjencanja?:
 
           {/* Short description */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ y: 12 }}
+            animate={{ y: 0 }}
             transition={{ delay: 1, duration: 1 }}
             className="text-white/80 max-w-2xl mx-auto leading-relaxed"
           >

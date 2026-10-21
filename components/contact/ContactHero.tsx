@@ -1,21 +1,14 @@
 "use client";
 
-import Image from "next/image";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { motion } from "framer-motion";
-import { monsieur } from "@/app/fonts";
 
 export default function ContactHero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
 
       {/* Background image */}
-      <Image
-        src="/images/webp/image53.webp"
-        alt="Mladenci na dan vjenčanja"
-        fill
-        priority
-        className="object-cover"
-      />
+      <ResponsiveImage src="/images/webp/image53.webp" alt="Mladenci na dan vjenčanja" priority />
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60" />
@@ -26,8 +19,8 @@ export default function ContactHero() {
 
           {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 16 }}
+            animate={{ y: 0 }}
             transition={{ duration: 1.2 }}
             className="leading-tight"
           >
@@ -46,8 +39,8 @@ export default function ContactHero() {
 
           {/* Description */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ y: 12 }}
+            animate={{ y: 0 }}
             transition={{ delay: 1, duration: 1 }}
             className="text-white/80 max-w-2xl mx-auto leading-relaxed"
           >

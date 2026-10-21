@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { monsieur } from "@/app/fonts";
 import { useContactHref } from "@/components/useContactHref";
 
 export default function Footer() {
@@ -56,13 +55,13 @@ export default function Footer() {
             </h3>
             <a
               href="mailto:alfavjencanja@gmail.com"
-              className="block hover:text-white transition"
+              className="block py-0.5 hover:text-white transition"
             >
               alfavjencanja@gmail.com
             </a>
             <a
               href="tel:+38598660275"
-              className="block hover:text-white transition"
+              className="block py-0.5 hover:text-white transition"
             >
               +385 98 660 275
             </a>
@@ -79,7 +78,7 @@ export default function Footer() {
                 href="https://www.facebook.com/p/ALFAVjenčanja-100063607212380/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block hover:text-white transition"
+                className="block py-0.5 hover:text-white transition"
               >
                 Facebook
               </a>
@@ -88,7 +87,7 @@ export default function Footer() {
                 href="https://www.instagram.com/video.alfa/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block hover:text-white transition"
+                className="block py-0.5 hover:text-white transition"
               >
                 Instagram
               </a>
@@ -98,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-20 text-center text-xs text-white/40">
+        <div className="mt-20 text-center text-xs text-white/50">
           © {new Date().getFullYear()} Video Alfa. Sva prava pridržana.
         </div>
 
