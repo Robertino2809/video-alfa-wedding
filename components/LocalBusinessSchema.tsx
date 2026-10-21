@@ -49,23 +49,23 @@ export default function LocalBusinessSchema() {
       itemListElement: [
         {
           '@type': 'Offer',
-          name: 'Essential',
+          name: 'Foto paketi',
           description:
-            'Do 6 sati fotografiranja, 300+ obrađenih fotografija, online privatna galerija, dostava unutar 30 dana.',
+            'Fotografiranje na dan vjenčanja, photo session na lokaciji i kožni wedding book 30×30 ili 30×40 cm. Sve fotografije i stranice booka na USB-u.',
           seller: { '@type': 'Organization', name: 'Video Alfa' },
         },
         {
           '@type': 'Offer',
-          name: 'Signature',
+          name: 'Video paketi',
           description:
-            'Do 10 sati fotografiranja, 600+ obrađenih fotografija, premium foto album, online galerija, dostava unutar 30 dana.',
+            'Montirani film u Full HD rezoluciji s uvodnom špicom i glavnim spotom, od 2,5 do 4,5 sata, u većim paketima s dvije kamere i dronom. Film na USB-u.',
           seller: { '@type': 'Organization', name: 'Video Alfa' },
         },
         {
           '@type': 'Offer',
-          name: 'Exclusive',
+          name: 'Light show',
           description:
-            'Cjelodnevno fotografiranje, 800+ obrađenih fotografija, luksuzni album, video snimanje, drone snimke, personalizirana ponuda.',
+            'Niski dim, prskalice i balončići za prvi ples, niski dim i prskalice za tortu te rasvjeta i bojanje cijele sale.',
           seller: { '@type': 'Organization', name: 'Video Alfa' },
         },
       ],

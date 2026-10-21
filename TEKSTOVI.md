@@ -95,33 +95,30 @@ Gumb: **Sve priče**
 
 **Komponenta:** `Pricing` – `components/pricing/Pricing.tsx`
 
-Nadnaslov: Što nudimo
+Nadnaslov: Što radimo
 
-## Usluge prilagođene vašoj priči
+## Fotografija, video i light show
 
 ### Fotografija
-- Kožni wedding book po izboru
-- Fotografiranje ceremonije i photo sessiona
-- Fotografije arhivirane na USB
+- Kožni wedding book po vašem izboru
+- Fotografiranje ceremonije i photo sessiona na lokaciji koju odaberete
+- Sve fotografije na USB-u
 
-Gumb: **Istražite pakete**
+Gumb: **Istražite pakete** (vodi na `/packages/?tab=foto`)
 
 ### Video snimanje
 - Uvodna špica i glavni spot
-- Odabir glazbe po želji mladenaca
-- Full HD 16:9 (widescreen)
-- Snimanje dronom dostupno uz odabrane pakete
-- Arhivirano na USB stick
+- Snimanje s dvije kamere i dronom u većim paketima
+- Montirani film na USB-u
 
-Gumb: **Istražite pakete**
+Gumb: **Istražite pakete** (vodi na `/packages/?tab=video`)
 
-### Light Show
-- Ambijentalna rasvjeta prostora
-- Niski dim za prvi ples
-- Prskalice za prvi ples i tortu
-- Osvjetljavanje po mjeri vašeg prostora
+### Light show
+- Niski dim, prskalice i balončići za prvi ples
+- Rasvjeta i bojanje cijele sale
+- Niski dim i prskalice za tortu
 
-Gumb: **Istražite pakete**
+Gumb: **Istražite pakete** (vodi na `/packages/?tab=light-show`)
 
 Gumb: **Pogledajte sve pakete i ponude**
 
@@ -303,136 +300,102 @@ Svaki paket pažljivo je osmišljen kako bi odgovarao različitim željama, stil
 
 **Komponenta:** `PackagesList` – `components/packages/PackagesList.tsx`
 
-Kartice: **Foto paketi** | **Video paketi**
+Kartice: **Foto paketi** | **Video paketi** | **Light show** (kartica se može otvoriti izravno: `/packages/?tab=foto`, `?tab=video`, `?tab=light-show`)
+
+Svaki paket ima isti raspored: naziv, prva stavka ispod naziva, ostale stavke u desnom stupcu i gumb **Zatraži ponudu**.
+
+**Napomena na dnu (sve kartice):**
+
+Stil fotografiranja, montaže i izgled booka su naši, a vaše želje dogovaramo unaprijed. Sve detalje dogovaramo u studiju u Slatini, Braće Radić 13, uz prethodnu najavu.
 
 ### Kartica „Foto paketi”
 
-Svaki foto paket ima isti raspored: naziv, wedding book, (dodatak), zatim zajednički tekst, opseg fotografiranja, (ograničenje) i gumb.
+**Zajednički tekst iznad paketa:**
 
-**Zajednički tekst u svakom foto paketu:**
+Svaki foto paket uključuje fotografiranje na dan vjenčanja, photo session na lokaciji koju zajedno dogovorimo i izradu kožnog wedding booka. Fotografije za book odabiremo i obrađujemo mi, a zatim od njih slažemo stranice knjige koja ide u tisak. Izgled korica birate sami. Sve fotografije i stranice booka dobivate i na USB-u.
 
-Izgled vanjskih stranica po želji mladenaca
-
-Kod wedding book-a se biraju fotografije, te računalo obrađuju i kreiraju stranice koje se printaju i stvaraju dojam knjige u kojoj se nalaze uspomene vašeg vjenčanog dana.
-
-Studio VIDEO ALFA zadržava pravo potpune kreativnosti prilikom izrade wedding book-a, kao i pravo stilskog izražaja prilikom fotografiranja na terenu.
-
-Ovaj paket se odnosi na fotografiranje i izradu wedding book-a te arhiviranje fotografija i stranica book-a na usb.
-
-Gumb (u svakom paketu): **Zatraži ponudu**
+Paketi se razlikuju po veličini booka, broju stranica i dokad ostajemo s vama na vjenčanju.
 
 #### Foto Paket 1
-Kožni wedding book 30×30 cm (20 listova / 40 stranica)
-
-Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor.
-
-*Ovaj paket se ne odnosi na fotografiranje kod kuće na okupljanju, i ne odnosi se na fotografiranje u restoranu.*
+- Wedding book 30×30 cm, 20 listova / 40 stranica
+- Fotografiranje na vjenčanju i na lokaciji
+- Ne uključuje fotografiranje okupljanja kod kuće ni u restoranu
 
 #### Foto Paket 2
-Kožni wedding book 30×30 cm (30 listova / 60 stranica)
-
-Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor.
-
-*Ovaj paket se ne odnosi na fotografiranje kod kuće na okupljanju, i ne odnosi se na fotografiranje u restoranu.*
+- Wedding book 30×30 cm, 30 listova / 60 stranica
+- Fotografiranje na vjenčanju i na lokaciji
+- Ne uključuje fotografiranje okupljanja kod kuće ni u restoranu
 
 #### Foto Paket 3 — oznaka: Popularno
-Kožni wedding book 30×40 cm (20 listova / 40 stranica)
-
-Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do večere.
-
-*Ovaj paket se ne odnosi na fotografiranje poslije večere.*
+- Wedding book 30×40 cm, 20 listova / 40 stranica
+- Fotografiranje na vjenčanju, na lokaciji i u restoranu do večere
+- Ne uključuje fotografiranje nakon večere
 
 #### Foto Paket 4
-Kožni wedding book 30×40 cm (30 listova / 50 stranica)
-
-Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do 3:00h ujutro.
+- Wedding book 30×40 cm, 30 listova / 50 stranica
+- Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00
 
 #### Foto Paket 5
-Kožni wedding book 30×40 cm (40 listova / 80 stranica)
-
-Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do 3:00h ujutro.
+- Wedding book 30×40 cm, 40 listova / 80 stranica
+- Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00
 
 #### Foto Paket 6
-Kožni wedding book 30×40 cm (40 listova / 80 stranica)
-
-te dodatna dva wedding book-a 15×20 cm
-
-Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do 3:30h ujutro.
-
-**Napomena na kraju foto paketa:**
-
-Svi mogući dogovori oko fotografiranja, izrade book-a, izbora korisnih stranica, lokacije i sl. dogovaramo isključivo u našem studiju VIDEO ALFA u Slatini, Braće Radić 13 (UZ PRETHODNI DOGOVOR).
+- Wedding book 30×40 cm, 40 listova / 80 stranica, uz dva dodatna booka 15×20 cm
+- Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:30
 
 ### Kartica „Video paketi”
 
-Svaki video paket ima isti raspored: naziv, spotovi, zatim prva tri zajednička retka, termin snimanja, količina materijala, preostala dva zajednička retka, (kamere) i gumb.
+**Zajednički tekst iznad paketa:**
 
-**Zajednički tekst u svakom video paketu** (redom):
+Snimamo dan prema terminu iz paketa i od snimljenog materijala montiramo film: uvodnu špicu, glavni spot snimljen na lokaciji koju odaberete i ostatak dana. Film je u Full HD rezoluciji i dobivate ga na USB-u.
 
-1. Odabir glazbe za uvod i spot po želji mladenaca.
-2. Ubacivanje u uvod fotografija iz djetinjstva (do 10 kom.)
-3. Snimanje na lokaciji za spot po izboru mladenaca.
-4. *(termin snimanja – vidi paket)*
-5. *(količina materijala – vidi paket)*
-6. U full HD kvaliteti 16:9 (widescreen)
-7. Dodatna montaža ili želje mladenaca za izmjenom ili skraćivanjem snimke dodatno se naplaćuje ovisno o utrošenom vremenu.
+Paketi se razlikuju po tome kad počinjemo snimati, koliko traje montirani film i s koliko kamera snimamo.
 
-Gumb (u svakom paketu): **Zatraži ponudu**
+Dodatne izmjene ili skraćivanje filma naplaćujemo prema utrošenom vremenu.
 
 #### Video Paket 1
-Uvodna špica + 1 glavni spot
-
-OD 16:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.
-
-Te na taj način kreira i snima ukupno 2,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.
+- Uvodna špica + 1 spot
+- Snimamo od 16:00 do 03:00
+- Montirani film od 2,5 sata
 
 #### Video Paket 2
-Uvodna špica + 1 glavni spot
-
-OD 16:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.
-
-Te na taj način kreira i snima ukupno 3 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.
+- Uvodna špica + 1 spot
+- Snimamo od 16:00 do 03:00
+- Montirani film od 3 sata
 
 #### Video Paket 3 — oznaka: Popularno
-Uvodna špica + 1 glavni spot
-
-OD 14:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.
-
-Te na taj način kreira i snima ukupno 3,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.
+- Uvodna špica + 1 spot
+- Snimamo od 14:00 do 03:00
+- Montirani film od 3,5 sata
 
 #### Video Paket 4
-Uvodna špica + 1 glavni spot
-
-OD 12:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.
-
-Te na taj način kreira i snima ukupno 4 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.
+- Uvodna špica + 1 spot
+- Snimamo od 12:00 do 03:00
+- Montirani film od 4 sata
 
 #### Video Paket 5
-Uvodna špica + 1 glavni spot
-
-OD 12:00 SATI na dan vjenčanja i ostaje u svatovima do 03:30 sata sljedećeg dana.
-
-Te na taj način kreira i snima ukupno 4,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.
-
-Ovaj paket se odnosi na videosnimanje sa dvije kamere.
-Kamerman 1 ostaje od 12:00h do 03:30h
-Kamerman 2 ostaje od 12:00h do 20:00h
+- Uvodna špica + 1 spot
+- Snimamo od 12:00 do 03:30
+- Montirani film od 4,5 sata
+- Dvije kamere: prva od 12:00 do 03:30, druga od 12:00 do 20:00
 
 #### Video Paket 6
-Uvodna špica + 2 spota
+- Uvodna špica + 1 spot
+- Snimamo od 12:00 do 03:30
+- Montirani film od 4,5 sata
+- Dvije kamere: prva od 12:00 do 03:30, druga od 12:00 do 20:00
+- Dron od 12:00 do ulaska u restoran
 
-OD 12:00 SATI na dan vjenčanja i ostaje u svatovima do 03:30 sata sljedećeg dana.
+### Kartica „Light show”
 
-Te na taj način kreira i snima ukupno 4,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.
+**Zajednički tekst iznad paketa:**
 
-Ovaj paket se odnosi na videosnimanje sa dvije kamere i dronom.
-Kamerman 1 ostaje od 12:00h do 03:30h
-Kamerman 2 ostaje od 12:00h do 20:00h
-Snimatelj sa dronom ostaje od 12:00h do ulaska u restoran
+Light show radimo za prvi ples i za rezanje torte, a cijelu salu osvjetljavamo u bojama tijekom večeri.
 
-**Napomena na kraju video paketa:**
-
-Foto studio Video Alfa zadržava pravo potpune kreativnosti prilikom izrade videosnimke, kao i pravo stilskog izražaja prilikom snimanja na terenu.
+#### Light show
+- Prvi ples: niski dim, 4 prskalice i balončići
+- Rasvjeta i bojanje cijele sale
+- Torta: niski dim i 2 prskalice
 
 ## 4.3 Poziv na akciju
 

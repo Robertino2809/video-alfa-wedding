@@ -36,8 +36,8 @@ export default function AboutStory() {
 
           <p>
             Sve dogovaramo uživo, u studiju u Slatini, Braće Radić 13.
-            Prođemo s vama plan dana, lokacije za fotografiranje, glazbu za
-            film i izgled wedding booka.
+            Prođemo s vama plan dana, lokacije za fotografiranje i snimanje te
+            izgled wedding booka.
           </p>
 
           <p className="text-sm text-gray-500">
