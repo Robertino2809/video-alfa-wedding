@@ -11,7 +11,7 @@ export default function ContactHero() {
       {/* Background image */}
       <Image
         src="/images/webp/image53.webp"
-        alt="Kontakt Alfa Vjenčanja – rezervacija fotografa vjenčanja"
+        alt="Mladenci na dan vjenčanja"
         fill
         priority
         className="object-cover"
@@ -24,16 +24,6 @@ export default function ContactHero() {
       <div className="relative z-20 flex items-center justify-center h-full text-center px-6">
         <div className="max-w-4xl text-white">
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="uppercase tracking-[0.4em] text-xs mb-6"
-          >
-            Kontakt
-          </motion.p>
-
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -42,11 +32,7 @@ export default function ContactHero() {
             className="leading-tight"
           >
             <span className="font-sans text-4xl md:text-6xl lg:text-8xl font-light block mb-4">
-              Započnimo
-            </span>
-
-            <span className="font-sans text-3xl md:text-5xl font-light">
-              vašu priču zajedno
+              Kontakt
             </span>
           </motion.h1>
 
@@ -65,9 +51,7 @@ export default function ContactHero() {
             transition={{ delay: 1, duration: 1 }}
             className="text-white/80 max-w-2xl mx-auto leading-relaxed"
           >
-            Slobodno nam se javite za provjeru dostupnosti,
-            dodatne informacije ili personaliziranu ponudu.
-            Veselimo se vašem danu.
+            Javite nam datum i mjesto vjenčanja i provjerit ćemo jesmo li slobodni.
           </motion.p>
 
         </div>

@@ -5,7 +5,7 @@ import { useState } from "react";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
-export default function Contact() {
+export default function Contact({ hideHeading = false }: { hideHeading?: boolean }) {
   const [date, setDate] = useState("");
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -63,32 +63,49 @@ export default function Contact() {
     <section id="kontakt" className="bg-white py-40">
       <div className="max-w-4xl mx-auto px-6 text-center">
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="uppercase tracking-[0.4em] text-xs text-gray-500 mb-6"
-        >
-          Kontakt
-        </motion.p>
+        {/* Na /contact/ naslov već daje ContactHero */}
+        {!hideHeading && (
+          <>
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="uppercase tracking-[0.4em] text-xs text-gray-500 mb-6"
+            >
+              Kontakt
+            </motion.p>
 
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <span className="font-[var(--font-pinyon)] text-6xl md:text-7xl block mb-3">
-            Započnimo
-          </span>
-          <span className="text-3xl md:text-5xl font-light">
-            vašu priču zajedno
-          </span>
-        </motion.h2>
+            {/* Heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2 }}
+              viewport={{ once: true }}
+              className="mb-10"
+            >
+              <span className="font-[var(--font-pinyon)] text-6xl md:text-7xl block mb-3">
+                Provjerite
+              </span>{" "}
+              <span className="text-3xl md:text-5xl font-light">
+                je li vaš datum slobodan
+              </span>
+            </motion.h2>
+
+            {/* Text */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              viewport={{ once: true }}
+              className="text-gray-600 max-w-2xl mx-auto mb-20 leading-relaxed"
+            >
+              Pošaljite nam datum i mjesto vjenčanja i javit ćemo vam se s ponudom.
+              Ako vam je lakše, nazovite nas ili dogovorite dolazak u studio u Slatini.
+            </motion.p>
+          </>
+        )}
 
         {/* Success state */}
         {formState === "success" ? (

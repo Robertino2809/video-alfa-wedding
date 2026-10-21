@@ -31,21 +31,13 @@ export default function AboutStory() {
           className="text-gray-600 leading-relaxed space-y-6"
         >
           <p>
-            Video Alfa postoji od 1998. godine. Više od 28 godina pratimo parove
-            kroz jedan od najvažnijih dana u njihovom životu — i svaki put
-            pristupamo mu s jednakom pažnjom i odgovornošću.
+            Video Alfa postoji od 1998. godine i od tada snimamo vjenčanja.
           </p>
 
           <p>
-            Naš tim radi iz studija u Slatini, Braće Radić 13.
-            Fotografija, video snimanje, dron i light show — sve pod jednim krovom,
-            s jednim timom koji poznajete od prvog susreta do predaje materijala.
-          </p>
-
-          <p>
-            Vjerujemo da dobra fotografija mora zadržati emociju,
-            ali i estetiku koja traje. Naš cilj nije samo dokumentirati dan —
-            već stvoriti vizualnu priču koju ćete gledati i za dvadeset godina.
+            Sve dogovaramo uživo, u studiju u Slatini, Braće Radić 13.
+            Prođemo s vama plan dana, lokacije za fotografiranje, glazbu za
+            film i izgled wedding booka.
           </p>
 
           <p className="text-sm text-gray-500">

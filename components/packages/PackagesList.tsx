@@ -6,129 +6,130 @@ import Link from "next/link";
 
 // ─── SHARED TEXT ──────────────────────────────────────────────────────────────
 
-const fotoShared = [
-  "Kod wedding book-a se biraju fotografije, te računalo obrađuju i kreiraju stranice koje se printaju i stvaraju dojam knjige u kojoj se nalaze uspomene vašeg vjenčanog dana.",
-  "Studio VIDEO ALFA zadržava pravo potpune kreativnosti prilikom izrade wedding book-a, kao i pravo stilskog izražaja prilikom fotografiranja na terenu.",
-  "Ovaj paket se odnosi na fotografiranje i izradu wedding book-a te arhiviranje fotografija i stranica book-a na usb.",
+const fotoIncluded = [
+  "kožni wedding book, korice po vašem izboru",
+  "fotografiranje ceremonije i photo session na lokaciji koju dogovorimo",
+  "sve fotografije i stranice booka na USB-u",
 ];
 
-const fotoSharedNote =
-  "Svi mogući dogovori oko fotografiranja, izrade book-a, izbora korisnih stranica, lokacije i sl. dogovaramo isključivo u našem studiju VIDEO ALFA u Slatini, Braće Radić 13 (UZ PRETHODNI DOGOVOR).";
-
-const videoShared = [
-  "Odabir glazbe za uvod i spot po želji mladenaca.",
-  "Ubacivanje u uvod fotografija iz djetinjstva (do 10 kom.)",
-  "Snimanje na lokaciji za spot po izboru mladenaca.",
-  "U full HD kvaliteti 16:9 (widescreen)",
-  "Dodatna montaža ili želje mladenaca za izmjenom ili skraćivanjem snimke dodatno se naplaćuje ovisno o utrošenom vremenu.",
+const videoIncluded = [
+  "uvodnu špicu s do 10 vaših fotografija iz djetinjstva",
+  "glazbu za uvod i spot po vašem izboru",
+  "snimanje spota na lokaciji koju odaberete",
+  "montirani film u Full HD rezoluciji na USB-u",
 ];
 
-const videoSharedNote =
-  "Foto studio Video Alfa zadržava pravo potpune kreativnosti prilikom izrade videosnimke, kao i pravo stilskog izražaja prilikom snimanja na terenu.";
+const videoIncludedNote =
+  "Dodatne izmjene ili skraćivanje filma naplaćujemo prema utrošenom vremenu.";
+
+const sharedNote =
+  "Sve detalje dogovaramo u studiju u Slatini, Braće Radić 13, uz prethodnu najavu.";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
+// Prva stavka (book / spotovi) ide ispod naziva, ostale u desni stupac.
 
-const fotoPackages = [
+type Package = {
+  id: number;
+  name: string;
+  highlight?: boolean;
+  items: string[];
+};
+
+const fotoPackages: Package[] = [
   {
     id: 1,
     name: "Foto Paket 1",
-    book: "Kožni wedding book 30×30 cm (20 listova / 40 stranica)",
-    extra: null,
-    coverage: "Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor.",
-    restriction: "Ovaj paket se ne odnosi na fotografiranje kod kuće na okupljanju, i ne odnosi se na fotografiranje u restoranu.",
+    items: [
+      "Wedding book 30×30 cm, 40 stranica",
+      "Fotografiranje na vjenčanju i na lokaciji",
+      "Ne uključuje okupljanje kod kuće ni restoran",
+    ],
   },
   {
     id: 2,
     name: "Foto Paket 2",
-    book: "Kožni wedding book 30×30 cm (30 listova / 60 stranica)",
-    extra: null,
-    coverage: "Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor.",
-    restriction: "Ovaj paket se ne odnosi na fotografiranje kod kuće na okupljanju, i ne odnosi se na fotografiranje u restoranu.",
+    items: [
+      "Wedding book 30×30 cm, 60 stranica",
+      "Fotografiranje na vjenčanju i na lokaciji",
+      "Ne uključuje okupljanje kod kuće ni restoran",
+    ],
   },
   {
     id: 3,
     name: "Foto Paket 3",
-    book: "Kožni wedding book 30×40 cm (20 listova / 40 stranica)",
-    extra: null,
     highlight: true,
-    coverage: "Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do večere.",
-    restriction: "Ovaj paket se ne odnosi na fotografiranje poslije večere.",
+    items: [
+      "Wedding book 30×40 cm, 40 stranica",
+      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do večere",
+    ],
   },
   {
     id: 4,
     name: "Foto Paket 4",
-    book: "Kožni wedding book 30×40 cm (30 listova / 50 stranica)",
-    extra: null,
-    coverage: "Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do 3:00h ujutro.",
-    restriction: null,
+    items: [
+      "Wedding book 30×40 cm, 50 stranica",
+      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00",
+    ],
   },
   {
     id: 5,
     name: "Foto Paket 5",
-    book: "Kožni wedding book 30×40 cm (40 listova / 80 stranica)",
-    extra: null,
-    coverage: "Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do 3:00h ujutro.",
-    restriction: null,
+    items: [
+      "Wedding book 30×40 cm, 80 stranica",
+      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00",
+    ],
   },
   {
     id: 6,
     name: "Foto Paket 6",
-    book: "Kožni wedding book 30×40 cm (40 listova / 80 stranica)",
-    extra: "te dodatna dva wedding book-a 15×20 cm",
-    coverage: "Fotografiranje se odnosi na fotografiranje na vjenčanju, te fotografiranje na lokaciji uz dogovor i u restoranu do 3:30h ujutro.",
-    restriction: null,
+    items: [
+      "Wedding book 30×40 cm, 80 stranica + dva manja booka 15×20 cm",
+      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:30",
+    ],
   },
 ];
 
-const videoPackages = [
+const videoPackages: Package[] = [
   {
     id: 1,
     name: "Video Paket 1",
-    spots: "Uvodna špica + 1 glavni spot",
-    schedule: "OD 16:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.",
-    material: "Te na taj način kreira i snima ukupno 2,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.",
-    cameras: null,
+    items: ["Uvodna špica + 1 spot", "Od 16:00 do 03:00", "2,5 sata montiranog materijala"],
   },
   {
     id: 2,
     name: "Video Paket 2",
-    spots: "Uvodna špica + 1 glavni spot",
-    schedule: "OD 16:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.",
-    material: "Te na taj način kreira i snima ukupno 3 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.",
-    cameras: null,
+    items: ["Uvodna špica + 1 spot", "Od 16:00 do 03:00", "3 sata montiranog materijala"],
   },
   {
     id: 3,
     name: "Video Paket 3",
-    spots: "Uvodna špica + 1 glavni spot",
     highlight: true,
-    schedule: "OD 14:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.",
-    material: "Te na taj način kreira i snima ukupno 3,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.",
-    cameras: null,
+    items: ["Uvodna špica + 1 spot", "Od 14:00 do 03:00", "3,5 sata montiranog materijala"],
   },
   {
     id: 4,
     name: "Video Paket 4",
-    spots: "Uvodna špica + 1 glavni spot",
-    schedule: "OD 12:00 SATI na dan vjenčanja i ostaje u svatovima do 03:00 sata sljedećeg dana.",
-    material: "Te na taj način kreira i snima ukupno 4 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.",
-    cameras: null,
+    items: ["Uvodna špica + 1 spot", "Od 12:00 do 03:00", "4 sata montiranog materijala"],
   },
   {
     id: 5,
     name: "Video Paket 5",
-    spots: "Uvodna špica + 1 glavni spot",
-    schedule: "OD 12:00 SATI na dan vjenčanja i ostaje u svatovima do 03:30 sata sljedećeg dana.",
-    material: "Te na taj način kreira i snima ukupno 4,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.",
-    cameras: "Ovaj paket se odnosi na videosnimanje sa dvije kamere.\nKamerman 1 ostaje od 12:00h do 03:30h\nKamerman 2 ostaje od 12:00h do 20:00h",
+    items: [
+      "Uvodna špica + 1 spot",
+      "Od 12:00 do 03:30",
+      "4,5 sata montiranog materijala",
+      "Dvije kamere (druga do 20:00)",
+    ],
   },
   {
     id: 6,
     name: "Video Paket 6",
-    spots: "Uvodna špica + 2 spota",
-    schedule: "OD 12:00 SATI na dan vjenčanja i ostaje u svatovima do 03:30 sata sljedećeg dana.",
-    material: "Te na taj način kreira i snima ukupno 4,5 sata materijala koji se računalno obrađuje, dodaje uvod i spot i arhivira na usb stick.",
-    cameras: "Ovaj paket se odnosi na videosnimanje sa dvije kamere i dronom.\nKamerman 1 ostaje od 12:00h do 03:30h\nKamerman 2 ostaje od 12:00h do 20:00h\nSnimatelj sa dronom ostaje od 12:00h do ulaska u restoran",
+    items: [
+      "Uvodna špica + 2 spota",
+      "Od 12:00 do 03:30",
+      "4,5 sata montiranog materijala",
+      "Dvije kamere (druga do 20:00) i dron (do ulaska u restoran)",
+    ],
   },
 ];
 
@@ -168,165 +169,80 @@ export default function PackagesList() {
       {/* ── PACKAGES ── */}
       <div className="max-w-6xl mx-auto px-6 py-24">
         <AnimatePresence mode="wait">
-
-          {/* ── FOTO ── */}
-          {activeTab === "foto" ? (
-            <motion.div
-              key="foto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {fotoPackages.map((pkg, index) => (
-                <motion.div
-                  key={pkg.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.07 }}
-                  className="border-b border-gray-200 py-16 relative"
-                >
-                  {pkg.highlight && (
-                    <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-500">
-                      Popularno
-                    </span>
-                  )}
-
-                  <div className="grid md:grid-cols-[1fr_2fr] gap-12">
-
-                    {/* Left */}
-                    <div>
-                      <h2 className="text-3xl md:text-4xl font-light mb-4">
-                        {pkg.name}
-                      </h2>
-                      <p className="text-sm font-medium text-gray-700 leading-relaxed">
-                        {pkg.book}
-                      </p>
-                      {pkg.extra && (
-                        <p className="text-sm text-gray-500 mt-1">
-                          {pkg.extra}
-                        </p>
-                      )}
-                    </div>
-
-                    {/* Right */}
-                    <div className="space-y-4">
-                      <p className="text-sm text-gray-600">
-                        Izgled vanjskih stranica po želji mladenaca
-                      </p>
-                      {fotoShared.map((line, i) => (
-                        <p key={i} className="text-sm text-gray-600 leading-relaxed">
-                          {line}
-                        </p>
-                      ))}
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {pkg.coverage}
-                      </p>
-                      {pkg.restriction && (
-                        <p className="text-sm text-gray-500 italic leading-relaxed">
-                          {pkg.restriction}
-                        </p>
-                      )}
-                      <Link
-                        href="/contact"
-                        className="inline-block pt-4 uppercase tracking-[0.3em] text-sm border border-black px-8 py-3 hover:bg-black hover:text-white transition duration-500"
-                      >
-                        Zatraži ponudu
-                      </Link>
-                    </div>
-
-                  </div>
-                </motion.div>
-              ))}
-
-              {/* Shared note — jednom na kraju */}
-              <p className="text-xs text-gray-500 leading-relaxed pt-8 max-w-2xl">
-                {fotoSharedNote}
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Zajednički dio — jednom iznad paketa */}
+            <div className="pb-8 border-b border-gray-200 max-w-2xl">
+              <p className="text-sm font-medium text-gray-700 mb-4">
+                {activeTab === "foto" ? "Svaki foto paket uključuje:" : "Svaki video paket uključuje:"}
               </p>
-            </motion.div>
+              <ul className="list-disc pl-5 space-y-2 text-sm text-gray-600 leading-relaxed">
+                {(activeTab === "foto" ? fotoIncluded : videoIncluded).map((line, i) => (
+                  <li key={i}>{line}</li>
+                ))}
+              </ul>
+              {activeTab === "video" && (
+                <p className="text-sm text-gray-500 leading-relaxed mt-4">
+                  {videoIncludedNote}
+                </p>
+              )}
+            </div>
 
-          ) : (
+            {(activeTab === "foto" ? fotoPackages : videoPackages).map((pkg, index) => (
+              <motion.div
+                key={pkg.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: index * 0.07 }}
+                className="border-b border-gray-200 py-16 relative"
+              >
+                {pkg.highlight && (
+                  <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-500">
+                    Popularno
+                  </span>
+                )}
 
-            /* ── VIDEO ── */
-            <motion.div
-              key="video"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              {videoPackages.map((pkg, index) => (
-                <motion.div
-                  key={pkg.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.07 }}
-                  className="border-b border-gray-200 py-16 relative"
-                >
-                  {pkg.highlight && (
-                    <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-500">
-                      Popularno
-                    </span>
-                  )}
+                <div className="grid md:grid-cols-[1fr_2fr] gap-12">
 
-                  <div className="grid md:grid-cols-[1fr_2fr] gap-12">
-
-                    {/* Left */}
-                    <div>
-                      <h2 className="text-3xl md:text-4xl font-light mb-4">
-                        {pkg.name}
-                      </h2>
-                      <p className="text-sm font-medium text-gray-700 leading-relaxed">
-                        {pkg.spots}
-                      </p>
-                    </div>
-
-                    {/* Right */}
-                    <div className="space-y-4">
-                      {videoShared.slice(0, 3).map((line, i) => (
-                        <p key={i} className="text-sm text-gray-600 leading-relaxed">
-                          {line}
-                        </p>
-                      ))}
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {pkg.schedule}
-                      </p>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {pkg.material}
-                      </p>
-                      {videoShared.slice(3).map((line, i) => (
-                        <p key={i} className="text-sm text-gray-600 leading-relaxed">
-                          {line}
-                        </p>
-                      ))}
-                      {pkg.cameras && (
-                        <div className="pt-2">
-                          {pkg.cameras.split("\n").map((line, i) => (
-                            <p key={i} className="text-sm text-gray-600 leading-relaxed">
-                              {line}
-                            </p>
-                          ))}
-                        </div>
-                      )}
-                      <Link
-                        href="/contact"
-                        className="inline-block pt-4 uppercase tracking-[0.3em] text-sm border border-black px-8 py-3 hover:bg-black hover:text-white transition duration-500"
-                      >
-                        Zatraži ponudu
-                      </Link>
-                    </div>
-
+                  {/* Left */}
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-light mb-4">
+                      {pkg.name}
+                    </h2>
+                    <p className="text-sm font-medium text-gray-700 leading-relaxed">
+                      {pkg.items[0]}
+                    </p>
                   </div>
-                </motion.div>
-              ))}
 
-              {/* Shared note — jednom na kraju */}
-              <p className="text-xs text-gray-500 leading-relaxed pt-8 max-w-2xl">
-                {videoSharedNote}
-              </p>
-            </motion.div>
+                  {/* Right */}
+                  <div className="space-y-4">
+                    {pkg.items.slice(1).map((line, i) => (
+                      <p key={i} className="text-sm text-gray-600 leading-relaxed">
+                        {line}
+                      </p>
+                    ))}
+                    <Link
+                      href="/contact"
+                      className="inline-block pt-4 uppercase tracking-[0.3em] text-sm border border-black px-8 py-3 hover:bg-black hover:text-white transition duration-500"
+                    >
+                      Zatraži ponudu
+                    </Link>
+                  </div>
 
-          )}
+                </div>
+              </motion.div>
+            ))}
+
+            {/* Shared note — jednom na kraju */}
+            <p className="text-xs text-gray-500 leading-relaxed pt-8 max-w-2xl">
+              {sharedNote}
+            </p>
+          </motion.div>
         </AnimatePresence>
       </div>
 

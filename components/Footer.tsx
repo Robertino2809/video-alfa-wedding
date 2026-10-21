@@ -3,8 +3,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { monsieur } from "@/app/fonts";
+import { useContactHref } from "@/components/useContactHref";
 
 export default function Footer() {
+  const contactHref = useContactHref();
+
   return (
     <footer className="bg-black text-white py-24">
       <div className="max-w-6xl mx-auto px-6">
@@ -20,11 +23,11 @@ export default function Footer() {
           <h2
             className={`font-sans text-4xl md:text-4xl lg:text-4xl mb-12`}
           >
-            Započnimo vašu priču
+            Imate datum? Javite nam se.
           </h2>
 
           <Link
-            href="#kontakt"
+            href={contactHref}
             className="uppercase tracking-[0.3em] text-sm border border-white px-8 py-3 hover:bg-white hover:text-black transition duration-500"
           >
             Rezervirajte termin
@@ -42,8 +45,8 @@ export default function Footer() {
             <h3 className="uppercase tracking-[0.3em] text-xs mb-6 text-white">
               Studio
             </h3>
-            <p>Alfa Vjenčanja</p>
-            <p>Bezvremenska fotografija</p>
+            <p>Foto studio Video Alfa</p>
+            <p>Braće Radić 13, Slatina</p>
           </div>
 
           {/* Contact */}
@@ -96,7 +99,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-20 text-center text-xs text-white/40">
-          © {new Date().getFullYear()} Alfa Vjenčanja. Sva prava pridržana.
+          © {new Date().getFullYear()} Video Alfa. Sva prava pridržana.
         </div>
 
       </div>

@@ -8,7 +8,6 @@ import GalleryPreview from "@/components/gallerypreview/GalleryPreview";
 import Hero from "@/components/hero/Hero";
 import Social from "@/components/instagram/Social";
 import Pricing from "@/components/pricing/Pricing";
-import Testimonials from "@/components/testimonials/Testimonials";
 import HomeStories from "@/components/vjencanja/HomeStories";
 import { getStories } from "@/lib/vjencanja";
 
@@ -41,7 +40,6 @@ export default function Home() {
       {stories.length > 0 && <HomeStories stories={stories} followsPreview={stories.length < 3} />}
       <Pricing />
       <FullscreenImage2 />
-      <Testimonials />
       <Contact />
       <ElegantGallery />
       <Social />
