@@ -3,7 +3,12 @@ import responsiveImages from "@/lib/responsive-images.json";
 type Props = {
   src: string;
   alt: string;
-  /** Hero slika iznad pregiba: bez lazy loadinga i s fetchpriority="high". */
+  /**
+   * Hero slika iznad pregiba: bez lazy loadinga, ali s fetchpriority="low" i bez
+   * preloada. Chrome sliku preko cijelog ekrana ne broji kao LCP (LCP je tekst u
+   * heroju), a visoki prioritet slike usporava tekst: Lighthouse 87 umjesto 94.
+   * Bez eksplicitnog "low" Chrome sliku u viewportu ponekad sam digne na High.
+   */
   priority?: boolean;
   sizes?: string;
   className?: string;
@@ -11,11 +16,6 @@ type Props = {
 
 type Entry = { width: number; height: number; srcSet: string };
 const images: Record<string, Entry> = responsiveImages;
-
-/** srcSet i dimenzije slike koje generira scripts/optimize-images.mjs (ako postoje). */
-export function getResponsiveImage(src: string): Entry | undefined {
-  return images[src];
-}
 
 /**
  * Pozadinska slika preko cijele sekcije (kao next/image s `fill`), ali s
@@ -40,7 +40,7 @@ export default function ResponsiveImage({
       height={entry?.height}
       alt={alt}
       loading={priority ? "eager" : "lazy"}
-      fetchPriority={priority ? "high" : undefined}
+      fetchPriority={priority ? "low" : undefined}
       decoding="async"
       className={`absolute inset-0 h-full w-full object-cover ${className}`}
     />
