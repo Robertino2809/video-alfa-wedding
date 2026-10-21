@@ -85,7 +85,7 @@ export default function StatsSection() {
             Naše brojke
           </p>
           <h2 className="text-4xl md:text-5xl font-light">
-            Povjerenje koje traje godinama
+            Od 1998. do danas
           </h2>
         </div>
 

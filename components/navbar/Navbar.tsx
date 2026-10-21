@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { useContactHref } from "@/components/useContactHref";
 
 export default function Navbar({ showVjencanja = false }: { showVjencanja?: boolean }) {
   const [open, setOpen] = useState(false);
+  const contactHref = useContactHref();
 
   const links = [
     { name: "Početna", href: "/" },
@@ -26,7 +28,7 @@ export default function Navbar({ showVjencanja = false }: { showVjencanja?: bool
           <Image 
             width={200}
             height={40}
-            alt="Alfa Vjenčanja logo – fotograf i video vjenčanja"
+            alt="Foto studio Video Alfa logo"
             src="/images/logo-alfa.png"
             priority
           />
@@ -48,7 +50,7 @@ export default function Navbar({ showVjencanja = false }: { showVjencanja?: bool
         {/* Desktop CTA */}
         <div className="hidden min-[1220px]:block">
           <Link
-            href="#kontakt"
+            href={contactHref}
             className="border border-white px-6 py-2 text-sm uppercase tracking-[0.2em] hover:bg-white hover:text-black transition duration-500"
           >
             Zatraži ponudu
@@ -81,7 +83,7 @@ export default function Navbar({ showVjencanja = false }: { showVjencanja?: bool
           ))}
 
           <Link
-            href="#kontakt"
+            href={contactHref}
             onClick={() => setOpen(false)}
             className="inline-block border border-white px-6 py-2 mt-4"
           >

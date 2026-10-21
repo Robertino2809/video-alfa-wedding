@@ -69,7 +69,7 @@ export default function Social() {
             >
               <Image
                 src={src}
-                alt="Detalji vjenčanja – Alfa Vjenčanja"
+                alt="Detalji s vjenčanja"
                 width={800}   // možeš prilagoditi
                 height={1000} // omjer nije bitan jer zadržava proporcije
                 sizes="(max-width: 768px) 100vw, 33vw"

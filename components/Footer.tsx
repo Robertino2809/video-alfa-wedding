@@ -3,8 +3,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { monsieur } from "@/app/fonts";
+import { useContactHref } from "@/components/useContactHref";
 
 export default function Footer() {
+  const contactHref = useContactHref();
+
   return (
     <footer className="bg-black text-white py-24">
       <div className="max-w-6xl mx-auto px-6">
@@ -24,7 +27,7 @@ export default function Footer() {
           </h2>
 
           <Link
-            href="#kontakt"
+            href={contactHref}
             className="uppercase tracking-[0.3em] text-sm border border-white px-8 py-3 hover:bg-white hover:text-black transition duration-500"
           >
             Rezervirajte termin
