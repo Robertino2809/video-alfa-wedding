@@ -7,6 +7,7 @@ export default function Pricing() {
   const services = [
     {
       name: "Fotografija",
+      tab: "foto",
       features: [
         "Kožni wedding book po vašem izboru",
         "Fotografiranje ceremonije i photo sessiona na lokaciji koju odaberete",
@@ -15,19 +16,20 @@ export default function Pricing() {
     },
     {
       name: "Video snimanje",
+      tab: "video",
       features: [
-        "Uvodna špica s vašim fotografijama iz djetinjstva",
-        "Glavni spot uz glazbu koju sami birate",
+        "Uvodna špica i glavni spot",
         "Snimanje s dvije kamere i dronom u većim paketima",
         "Montirani film na USB-u",
       ],
     },
     {
       name: "Light show",
+      tab: "light-show",
       features: [
-        "Ambijentalna rasvjeta sale",
-        "Niski dim za prvi ples",
-        "Prskalice za prvi ples i tortu",
+        "Niski dim, prskalice i balončići za prvi ples",
+        "Rasvjeta i bojanje cijele sale",
+        "Niski dim i prskalice za tortu",
       ],
     },
   ];
@@ -87,7 +89,7 @@ export default function Pricing() {
               </ul>
 
               <Link
-                href="/packages"
+                href={`/packages/?tab=${service.tab}`}
                 className="relative uppercase tracking-[0.3em] text-xs group"
               >
                 Istražite pakete
