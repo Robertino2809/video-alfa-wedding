@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# usporedba optimiziranih slika (scripts/optimize-images.mjs --out=compare)
+/compare/
