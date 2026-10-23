@@ -19,21 +19,24 @@ export function assertPhoto({ src, alt }: { src?: string; alt?: string }) {
 export default function Fotografija({ src, alt, inPair }: FotografijaProps) {
   assertPhoto({ src, alt });
 
+  const { width, height } = getImageDimensions(src);
+
   if (inPair) {
+    // Širinu u redu određuje <Par> (flex-grow prema omjeru, --r), visina slijedi iz omjera.
     return (
-      <div className="relative aspect-[4/5] overflow-hidden">
+      <div className="par-item" style={{ "--r": width / height } as React.CSSProperties}>
         <Image
           src={src}
           alt={alt}
-          fill
+          width={width}
+          height={height}
           sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover"
+          className="w-full h-auto"
         />
       </div>
     );
   }
 
-  const { width, height } = getImageDimensions(src);
   // Uspravne fotografije ne smiju biti više od ~90% visine ekrana.
   return (
     <FadeIn
