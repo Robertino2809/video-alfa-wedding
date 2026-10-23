@@ -26,6 +26,7 @@ export const largeImages = [
   "public/images/webp/image30.webp", // VjencanjaHero
   "public/images/webp/image83.webp", // FullScreenImage
   "public/images/webp/DSC_8883.webp", // FullScreenImage2
+  "public/images/vjencanja/vjencanje-daruvar-marija-i-deni/crkva-7.webp", // naslovna priče Marija i Deni
 ];
 
 // Logotipi ostaju PNG (isto ime, logo-alfa.png koristi i LocalBusinessSchema).

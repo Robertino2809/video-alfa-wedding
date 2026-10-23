@@ -38,5 +38,10 @@
     "width": 2560,
     "height": 1707,
     "srcSet": "/images/webp/image94-640.webp 640w, /images/webp/image94-1080.webp 1080w, /images/webp/image94-1600.webp 1600w, /images/webp/image94.webp 2560w"
+  },
+  "/images/vjencanja/vjencanje-daruvar-marija-i-deni/crkva-7.webp": {
+    "width": 2560,
+    "height": 1696,
+    "srcSet": "/images/vjencanja/vjencanje-daruvar-marija-i-deni/crkva-7-640.webp 640w, /images/vjencanja/vjencanje-daruvar-marija-i-deni/crkva-7-1080.webp 1080w, /images/vjencanja/vjencanje-daruvar-marija-i-deni/crkva-7-1600.webp 1600w, /images/vjencanja/vjencanje-daruvar-marija-i-deni/crkva-7.webp 2560w"
   }
 }
