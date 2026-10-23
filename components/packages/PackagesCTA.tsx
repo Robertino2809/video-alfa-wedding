@@ -19,10 +19,10 @@ export default function PackagesCTA() {
           <span
             className={`${monsieur.className} text-4xl md:text-6xl lg:text-7xl block mb-4`}
           >
-            Niste sigurni
+            Spremni
           </span>{" "}
           <span className="text-3xl md:text-5xl font-light">
-            koji paket?
+            za vaš poseban dan?
           </span>
         </motion.h2>
 
@@ -30,7 +30,7 @@ export default function PackagesCTA() {
           href="/contact"
           className="uppercase tracking-[0.3em] text-sm border border-white px-8 py-3 hover:bg-white hover:text-black transition duration-500"
         >
-          Javite nam se
+          Kontaktirajte nas
         </Link>
 
       </div>

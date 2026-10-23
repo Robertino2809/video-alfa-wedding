@@ -33,7 +33,7 @@ export default function Hero() {
             transition={{ duration: 1.2, delay: 0.3 }}
             className="mt-6 text-base sm:text-lg md:text-xl font-light text-white/90"
           >
-            Obiteljski studio iz Slatine, od 1998.
+            Dobrodošli u naš studio – gdje trenuci postaju uspomene
           </motion.p>
 
           <motion.div
@@ -49,8 +49,9 @@ export default function Hero() {
             transition={{ delay: 1, duration: 1 }}
             className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Snimamo vjenčanja od priprema do zadnjeg plesa. Od tog dana složimo
-            wedding book i film koji ćete rado gledati i za dvadeset godina.
+            Stvaramo bezvremensku fotografiju vjenčanja koja bilježi emocije,
+            atmosferu i detalje vašeg najposebnijeg dana. Svaka priča je
+            jedinstvena – a naš cilj je ispričati je s elegancijom.
           </motion.p>
 
           <motion.div
@@ -72,7 +73,7 @@ export default function Hero() {
                 hover:bg-black hover:text-white
               "
             >
-              <span className="mr-3">Provjerite slobodan datum</span>
+              <span className="mr-3">Rezervirajte svoj datum</span>
               <span className="text-lg">→</span>
             </Link>
           </motion.div>

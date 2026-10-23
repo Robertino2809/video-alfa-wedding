@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import GalleryHero from "@/components/GalleryHero";
 import GalleryGrid from "@/components/GalleryGrid";
-import { hasStories } from "@/lib/vjencanja";
 
 export const metadata: Metadata = {
   title: 'Galerija fotografija vjenčanja | Video Alfa',
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <main>
-      <GalleryHero showVjencanja={hasStories()} />
+      <GalleryHero />
       <GalleryGrid />
     </main>
   );

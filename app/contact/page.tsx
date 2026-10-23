@@ -18,7 +18,10 @@ export default function ContactPage() {
   return (
     <main>
       <ContactHero />
-      <ContactForm hideHeading />
+      <ContactForm
+        eyebrow="Upit"
+        description="Slobodno nam se javite za provjeru dostupnosti, dodatne informacije ili personaliziranu ponudu. Veselimo se vašem danu."
+      />
     </main>
   );
 }

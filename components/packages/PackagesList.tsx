@@ -17,23 +17,28 @@ const tabs: { id: Tab; label: string }[] = [
 // Zajednički tekst iznad paketa, po odlomcima.
 const intro: Record<Tab, string[]> = {
   foto: [
-    "Svaki foto paket uključuje fotografiranje na dan vjenčanja, photo session na lokaciji koju zajedno dogovorimo i izradu kožnog wedding booka. Fotografije za book odabiremo i obrađujemo mi, a zatim od njih slažemo stranice knjige koja ide u tisak. Izgled korica birate sami. Sve fotografije i stranice booka dobivate i na USB-u.",
-    "Paketi se razlikuju po veličini booka, broju stranica i dokad ostajemo s vama na vjenčanju.",
+    "Izgled vanjskih stranica po želji mladenaca.",
+    "Kod wedding booka biramo fotografije, računalno ih obrađujemo i kreiramo stranice koje se printaju i stvaraju dojam knjige u kojoj se nalaze uspomene vašeg vjenčanog dana.",
+    "Paket se odnosi na fotografiranje i izradu wedding booka te arhiviranje fotografija i stranica booka na USB.",
   ],
   video: [
-    "Snimamo dan prema terminu iz paketa i od snimljenog materijala montiramo film: uvodnu špicu, glavni spot snimljen na lokaciji koju odaberete i ostatak dana. Film je u Full HD rezoluciji i dobivate ga na USB-u.",
-    "Paketi se razlikuju po tome kad počinjemo snimati, koliko traje montirani film i s koliko kamera snimamo.",
-    "Dodatne izmjene ili skraćivanje filma naplaćujemo prema utrošenom vremenu.",
+    "Snimanje na lokaciji za spot po izboru mladenaca.",
+    "U Full HD kvaliteti 16:9 (widescreen).",
+    "Dodatna montaža ili želje mladenaca za izmjenom ili skraćivanjem snimke dodatno se naplaćuju ovisno o utrošenom vremenu.",
   ],
-  "light-show": [
-    "Light show radimo za prvi ples i za rezanje torte, a cijelu salu osvjetljavamo u bojama tijekom večeri.",
-  ],
+  "light-show": [],
 };
 
-const sharedNote = [
-  "Stil fotografiranja, montaže i izgled booka su naši, a vaše želje dogovaramo unaprijed.",
-  "Sve detalje dogovaramo u studiju u Slatini, Braće Radić 13, uz prethodnu najavu.",
-];
+// Napomena ispod paketa pojedine kartice.
+const tabNote: Record<Tab, string | null> = {
+  foto: "Studio Video Alfa zadržava pravo potpune kreativnosti prilikom izrade wedding booka, kao i pravo stilskog izražaja prilikom fotografiranja na terenu.",
+  video: "Foto studio Video Alfa zadržava pravo potpune kreativnosti prilikom izrade videosnimke, kao i pravo stilskog izražaja prilikom snimanja na terenu.",
+  "light-show": null,
+};
+
+// Napomena na dnu svih kartica.
+const sharedNote =
+  "Sve dogovore oko fotografiranja, izrade booka, izbora korisnih stranica, lokacije i sl. dogovaramo isključivo u našem studiju Video Alfa u Slatini, Braće Radić 13, uz prethodni dogovor.";
 
 // ─── DATA ────────────────────────────────────────────────────────────────────
 // Prva stavka (book / spotovi) ide ispod naziva, ostale u desni stupac.
@@ -41,7 +46,6 @@ const sharedNote = [
 type Package = {
   id: number;
   name: string;
-  highlight?: boolean;
   items: string[];
 };
 
@@ -50,97 +54,114 @@ const fotoPackages: Package[] = [
     id: 1,
     name: "Foto Paket 1",
     items: [
-      "Wedding book 30×30 cm, 20 listova / 40 stranica",
-      "Fotografiranje na vjenčanju i na lokaciji",
-      "Ne uključuje fotografiranje okupljanja kod kuće ni u restoranu",
+      "Kožni wedding book 30×30 cm (20 listova / 40 stranica).",
+      "Fotografiranje se odnosi na fotografiranje na vjenčanju te fotografiranje na lokaciji uz dogovor.",
+      "Paket se ne odnosi na fotografiranje kod kuće na okupljanju ni na fotografiranje u restoranu.",
     ],
   },
   {
     id: 2,
     name: "Foto Paket 2",
     items: [
-      "Wedding book 30×30 cm, 30 listova / 60 stranica",
-      "Fotografiranje na vjenčanju i na lokaciji",
-      "Ne uključuje fotografiranje okupljanja kod kuće ni u restoranu",
+      "Kožni wedding book 30×30 cm (30 listova / 60 stranica).",
+      "Fotografiranje se odnosi na fotografiranje na vjenčanju te fotografiranje na lokaciji uz dogovor.",
+      "Paket se ne odnosi na fotografiranje kod kuće na okupljanju ni na fotografiranje u restoranu.",
     ],
   },
   {
     id: 3,
     name: "Foto Paket 3",
-    highlight: true,
     items: [
-      "Wedding book 30×40 cm, 20 listova / 40 stranica",
-      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do večere",
-      "Ne uključuje fotografiranje nakon večere",
+      "Kožni wedding book 30×40 cm (20 listova / 40 stranica).",
+      "Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do večere.",
+      "Paket se ne odnosi na fotografiranje poslije večere.",
     ],
   },
   {
     id: 4,
     name: "Foto Paket 4",
     items: [
-      "Wedding book 30×40 cm, 30 listova / 50 stranica",
-      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00",
+      "Kožni wedding book 30×40 cm (30 listova / 60 stranica).",
+      "Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do 3:00 ujutro.",
     ],
   },
   {
     id: 5,
     name: "Foto Paket 5",
     items: [
-      "Wedding book 30×40 cm, 40 listova / 80 stranica",
-      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00",
+      "Kožni wedding book 30×40 cm (40 listova / 80 stranica).",
+      "Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do 3:00 ujutro.",
     ],
   },
   {
     id: 6,
     name: "Foto Paket 6",
     items: [
-      "Wedding book 30×40 cm, 40 listova / 80 stranica, uz dva dodatna booka 15×20 cm",
-      "Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:30",
+      "Kožni wedding book 30×40 cm (40 listova / 80 stranica) te dodatna dva wedding booka 15×20 cm.",
+      "Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do 3:30 ujutro.",
     ],
   },
 ];
+
+// Zajednički završetak opisa video paketa, s trajanjem materijala.
+const videoMaterial = (hours: string) =>
+  `Ukupno ${hours} sata materijala, koji računalno obrađujemo, dodajemo uvod i spot te arhiviramo na USB stick.`;
 
 const videoPackages: Package[] = [
   {
     id: 1,
     name: "Video Paket 1",
-    items: ["Uvodna špica + 1 spot", "Snimamo od 16:00 do 03:00", "Montirani film od 2,5 sata"],
+    items: [
+      "Uvodna špica + 1 glavni spot.",
+      "Snimamo od 16:00 na dan vjenčanja do 03:00 sljedećeg dana.",
+      videoMaterial("2,5"),
+    ],
   },
   {
     id: 2,
     name: "Video Paket 2",
-    items: ["Uvodna špica + 1 spot", "Snimamo od 16:00 do 03:00", "Montirani film od 3 sata"],
+    items: [
+      "Uvodna špica + 1 glavni spot.",
+      "Snimamo od 16:00 na dan vjenčanja do 03:00 sljedećeg dana.",
+      videoMaterial("3"),
+    ],
   },
   {
     id: 3,
     name: "Video Paket 3",
-    highlight: true,
-    items: ["Uvodna špica + 1 spot", "Snimamo od 14:00 do 03:00", "Montirani film od 3,5 sata"],
+    items: [
+      "Uvodna špica + 1 glavni spot.",
+      "Snimamo od 14:00 na dan vjenčanja do 03:00 sljedećeg dana.",
+      videoMaterial("3,5"),
+    ],
   },
   {
     id: 4,
     name: "Video Paket 4",
-    items: ["Uvodna špica + 1 spot", "Snimamo od 12:00 do 03:00", "Montirani film od 4 sata"],
+    items: [
+      "Uvodna špica + 1 glavni spot.",
+      "Snimamo od 12:00 na dan vjenčanja do 03:00 sljedećeg dana.",
+      videoMaterial("4"),
+    ],
   },
   {
     id: 5,
     name: "Video Paket 5",
     items: [
-      "Uvodna špica + 1 spot",
-      "Snimamo od 12:00 do 03:30",
-      "Montirani film od 4,5 sata",
-      "Dvije kamere: prva od 12:00 do 03:30, druga od 12:00 do 20:00",
+      "Uvodna špica + 1 glavni spot.",
+      "Snimamo od 12:00 na dan vjenčanja do 03:30 sljedećeg dana.",
+      videoMaterial("4,5"),
+      "Snimanje s dvije kamere: kamerman 1 od 12:00 do 03:30, kamerman 2 od 12:00 do 20:00.",
     ],
   },
   {
     id: 6,
     name: "Video Paket 6",
     items: [
-      "Uvodna špica + 1 spot",
-      "Snimamo od 12:00 do 03:30",
-      "Montirani film od 4,5 sata",
-      "Dvije kamere: prva od 12:00 do 03:30, druga od 12:00 do 20:00",
-      "Dron od 12:00 do ulaska u restoran",
+      "Uvodna špica + 1 glavni spot.",
+      "Snimamo od 12:00 na dan vjenčanja do 03:30 sljedećeg dana.",
+      videoMaterial("4,5"),
+      "Snimanje s dvije kamere i dronom: kamerman 1 od 12:00 do 03:30, kamerman 2 od 12:00 do 20:00, snimatelj s dronom od 12:00 do ulaska u restoran.",
     ],
   },
 ];
@@ -231,13 +252,15 @@ export default function PackagesList() {
             transition={{ duration: 0.3 }}
           >
             {/* Zajednički dio — jednom iznad paketa */}
-            <div className="pb-8 border-b border-gray-200 max-w-2xl">
-              <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
-                {intro[activeTab].map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-                ))}
+            {intro[activeTab].length > 0 && (
+              <div className="pb-8 border-b border-gray-200 max-w-2xl">
+                <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+                  {intro[activeTab].map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {packagesByTab[activeTab].map((pkg, index) => (
               <motion.div
@@ -247,12 +270,6 @@ export default function PackagesList() {
                 transition={{ duration: 0.7, delay: index * 0.07 }}
                 className="border-b border-gray-200 py-16 relative"
               >
-                {pkg.highlight && (
-                  <span className="absolute top-16 right-0 uppercase tracking-[0.3em] text-[10px] text-gray-500">
-                    Popularno
-                  </span>
-                )}
-
                 <div className="grid md:grid-cols-[1fr_2fr] gap-12">
 
                   {/* Left */}
@@ -284,11 +301,10 @@ export default function PackagesList() {
               </motion.div>
             ))}
 
-            {/* Shared note — jednom na kraju */}
+            {/* Napomene — jednom na kraju */}
             <div className="space-y-2 text-xs text-gray-500 leading-relaxed pt-8 max-w-2xl">
-              {sharedNote.map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
+              {tabNote[activeTab] && <p>{tabNote[activeTab]}</p>}
+              <p>{sharedNote}</p>
             </div>
           </motion.div>
         </AnimatePresence>

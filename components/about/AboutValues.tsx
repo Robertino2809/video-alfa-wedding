@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 export default function AboutValues() {
   const values = [
     {
-      title: "Sve na jednom mjestu",
-      text: "Fotograf, snimatelj, dron i light show iz istog studija. Jedan dogovor za cijeli dan."
+      title: "Diskrecija",
+      text: "Prisustvo bez nametanja, kako bi trenuci ostali prirodni i iskreni."
     },
     {
-      title: "Dogovor uživo",
-      text: "Prije vjenčanja se nađemo u studiju i prođemo cijeli dan, od priprema do ulaska u restoran."
+      title: "Estetika",
+      text: "Pažljivo birana kompozicija, svjetlo i detalji u svakom kadru."
     },
     {
-      title: "Isti tim do kraja",
-      text: "Ljudi s kojima dogovarate isti su ljudi koji snimaju i koji vam predaju book i film."
+      title: "Povjerenje",
+      text: "Gradimo odnos koji omogućuje opuštenost i autentičnost."
     }
   ];
 
