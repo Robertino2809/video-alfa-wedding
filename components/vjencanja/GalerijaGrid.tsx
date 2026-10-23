@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import type { GalleryRow } from "./photoLayout";
 
 type GalerijaImage = {
   src: string;
@@ -11,7 +12,13 @@ type GalerijaImage = {
   height: number;
 };
 
-export default function GalerijaGrid({ images }: { images: GalerijaImage[] }) {
+export default function GalerijaGrid({
+  images,
+  rows,
+}: {
+  images: GalerijaImage[];
+  rows: GalleryRow[];
+}) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const next = () =>
@@ -35,30 +42,47 @@ export default function GalerijaGrid({ images }: { images: GalerijaImage[] }) {
 
   return (
     <>
-      <div className="my-16 md:my-20 columns-1 sm:columns-2 md:columns-3 gap-2">
-        {images.map((image, index) => (
-          <motion.button
-            key={image.src + index}
-            type="button"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: (index % 3) * 0.15 }}
-            viewport={{ once: true }}
-            onClick={() => setSelectedIndex(index)}
-            aria-label={`Povećaj sliku: ${image.alt}`}
-            className="block w-full mb-2 break-inside-avoid overflow-hidden cursor-pointer"
+      {/* Justified rows: unutar reda flex-grow = omjer fotke, pa su sve iste visine
+          i ništa se ne reže. Na mobitelu jedna fotka u redu preko cijele širine. */}
+      <div className="my-16 md:my-20 flex flex-col gap-2">
+        {rows.map((row) => (
+          <div
+            key={row.items[0]}
+            className="flex flex-col md:flex-row gap-2 w-full mx-auto md:max-w-[var(--mw)]"
+            style={
+              row.maxWidth
+                ? ({ "--mw": `${row.maxWidth.toFixed(3)}%` } as React.CSSProperties)
+                : undefined
+            }
           >
-            <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.6 }}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="w-full h-auto object-cover"
-              />
-            </motion.div>
-          </motion.button>
+            {row.items.map((index, i) => {
+              const image = images[index];
+              const ratio = image.width / image.height;
+              return (
+                <motion.button
+                  key={image.src + index}
+                  type="button"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: i * 0.15 }}
+                  viewport={{ once: true }}
+                  onClick={() => setSelectedIndex(index)}
+                  aria-label={`Povećaj sliku: ${image.alt}`}
+                  className="group block min-w-0 cursor-zoom-in bg-black md:[flex:var(--r)_1_0%]"
+                  style={{ "--r": ratio } as React.CSSProperties}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="w-full h-auto transition-opacity duration-500 group-hover:opacity-85"
+                  />
+                </motion.button>
+              );
+            })}
+          </div>
         ))}
       </div>
 
