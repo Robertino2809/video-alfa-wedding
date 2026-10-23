@@ -16,7 +16,7 @@ Poveznice (desktop, od 1220px):
 - Paketi
 - Kontakt
 
-Gumb: **Zatraži ponudu**
+Gumb: **Zatraži ponudu** (na početnoj skrola do kontakt forme, na ostalim stranicama vodi na `/contact/`)
 
 Mobilni izbornik (ispod 1220px) – iste poveznice uz dodatnu:
 - Početna
@@ -79,13 +79,13 @@ Gumb: **Pogledajte galeriju**
 
 **Komponenta:** `HomeStories` – `components/vjencanja/HomeStories.tsx` (kartice: `StoryCards` – `components/vjencanja/StoryCards.tsx`)
 
-*(prikazuje se samo ako postoji barem jedna objavljena priča; trenutno je jedina priča, `content/vjencanja/primjer.mdx`, neobjavljena pa se sekcija u produkciji ne vidi)*
+*(prikazuje se samo ako postoji barem jedna objavljena priča)*
 
 Nadnaslov: Vjenčanja
 
 ## Priče s vjenčanja
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+Svako vjenčanje koje snimamo je drugačije. Ovdje izdvajamo neka od njih.
 
 Kartice priča (tekst dolazi iz MDX datoteka): grad, naslov priče; kod samo jedne priče i kratki opis te poveznica **Pročitajte priču**.
 
@@ -95,28 +95,29 @@ Gumb: **Sve priče**
 
 **Komponenta:** `Pricing` – `components/pricing/Pricing.tsx`
 
-Nadnaslov: Što radimo
+Nadnaslov: Što nudimo
 
-## Fotografija, video i light show
+## Usluge prilagođene vašoj priči
 
 ### Fotografija
-- Kožni wedding book po vašem izboru
-- Fotografiranje ceremonije i photo sessiona na lokaciji koju odaberete
-- Sve fotografije na USB-u
+- Kožni wedding book po izboru
+- Fotografiranje ceremonije i photo sessiona
+- Fotografije arhivirane na USB
 
 Gumb: **Istražite pakete** (vodi na `/packages/?tab=foto`)
 
 ### Video snimanje
 - Uvodna špica i glavni spot
-- Snimanje s dvije kamere i dronom u većim paketima
-- Montirani film na USB-u
+- Full HD 16:9 (widescreen)
+- Snimanje dronom dostupno uz odabrane pakete
+- Arhivirano na USB stick
 
 Gumb: **Istražite pakete** (vodi na `/packages/?tab=video`)
 
 ### Light show
-- Niski dim, prskalice i balončići za prvi ples
+- Niski dim, 4 prskalice i balončići za prvi ples
 - Rasvjeta i bojanje cijele sale
-- Niski dim i prskalice za tortu
+- Niski dim i 2 prskalice za tortu
 
 Gumb: **Istražite pakete** (vodi na `/packages/?tab=light-show`)
 
@@ -128,23 +129,7 @@ Gumb: **Pogledajte sve pakete i ponude**
 
 *(samo slika, bez teksta)*
 
-## 1.8 Iskustva mladenaca
-
-**Komponenta:** `Testimonials` – `components/testimonials/Testimonials.tsx`
-
-Nadnaslov: Iskustva mladenaca
-
-## Riječi koje nam znače najviše
-
-> “Od prvog susreta znali smo da smo u pravim rukama. Fotografije su nadmašile sva naša očekivanja.”
->
-> — ANA & MARKO
-
-> “Diskretni, profesionalni i nevjerojatno talentirani. Svaki trenutak zabilježen je s osjećajem i stilom.”
->
-> — IVANA & LUKA
-
-## 1.9 Kontakt
+## 1.8 Kontakt
 
 **Komponenta:** `Contact` – `components/contact/Contact.tsx`
 
@@ -175,19 +160,21 @@ Kontakt podaci:
 - Facebook
 - Instagram
 
-## 1.10 Galerija od tri fotografije
+## 1.9 Galerija od tri fotografije
 
 **Komponenta:** `ElegantGallery` – `components/ElegantGallery.tsx`
 
 *(samo slike, bez teksta)*
 
-## 1.11 Društvene mreže
+## 1.10 Društvene mreže
 
 **Komponenta:** `Social` – `components/instagram/Social.tsx`
 
 Nadnaslov: Društvene mreže
 
 ## Trenuci koje dijelimo svakodnevno
+
+Mreža od šest fotografija.
 
 Poveznice:
 - Instagram
@@ -264,17 +251,7 @@ Nadnaslov: Galerija
 
 Svako vjenčanje nosi svoju atmosferu, emociju i energiju. Ovdje izdvajamo trenutke koji pričaju priču o ljubavi, eleganciji i bezvremenskoj estetici.
 
-## 3.2 Uvod
-
-**Komponenta:** `GalleryIntro` – `components/GalleryIntro.tsx`
-
-Nadnaslov: Galerija
-
-## Trenuci koji ostaju zauvijek
-
-Svako vjenčanje nosi svoju atmosferu, emociju i energiju. Ovdje izdvajamo odabrane trenutke koji pričaju priču o ljubavi, eleganciji i bezvremenskoj estetici.
-
-## 3.3 Mreža fotografija
+## 3.2 Mreža fotografija
 
 **Komponenta:** `GalleryGrid` – `components/GalleryGrid.tsx`
 
@@ -302,100 +279,80 @@ Svaki paket pažljivo je osmišljen kako bi odgovarao različitim željama, stil
 
 Kartice: **Foto paketi** | **Video paketi** | **Light show** (kartica se može otvoriti izravno: `/packages/?tab=foto`, `?tab=video`, `?tab=light-show`)
 
-Svaki paket ima isti raspored: naziv, prva stavka ispod naziva, ostale stavke u desnom stupcu i gumb **Zatraži ponudu**.
+Svaki paket ima isti raspored: naziv, prva rečenica ispod naziva, ostale rečenice u desnom stupcu i gumb **Zatraži ponudu**.
 
 **Napomena na dnu (sve kartice):**
 
-Stil fotografiranja, montaže i izgled booka su naši, a vaše želje dogovaramo unaprijed. Sve detalje dogovaramo u studiju u Slatini, Braće Radić 13, uz prethodnu najavu.
+Sve dogovore oko fotografiranja, izrade booka, izbora korisnih stranica, lokacije i sl. dogovaramo isključivo u našem studiju Video Alfa u Slatini, Braće Radić 13, uz prethodni dogovor.
 
 ### Kartica „Foto paketi”
 
 **Zajednički tekst iznad paketa:**
 
-Svaki foto paket uključuje fotografiranje na dan vjenčanja, photo session na lokaciji koju zajedno dogovorimo i izradu kožnog wedding booka. Fotografije za book odabiremo i obrađujemo mi, a zatim od njih slažemo stranice knjige koja ide u tisak. Izgled korica birate sami. Sve fotografije i stranice booka dobivate i na USB-u.
+Izgled vanjskih stranica po želji mladenaca.
 
-Paketi se razlikuju po veličini booka, broju stranica i dokad ostajemo s vama na vjenčanju.
+Kod wedding booka biramo fotografije, računalno ih obrađujemo i kreiramo stranice koje se printaju i stvaraju dojam knjige u kojoj se nalaze uspomene vašeg vjenčanog dana.
+
+Paket se odnosi na fotografiranje i izradu wedding booka te arhiviranje fotografija i stranica booka na USB.
 
 #### Foto Paket 1
-- Wedding book 30×30 cm, 20 listova / 40 stranica
-- Fotografiranje na vjenčanju i na lokaciji
-- Ne uključuje fotografiranje okupljanja kod kuće ni u restoranu
+Kožni wedding book 30×30 cm (20 listova / 40 stranica). Fotografiranje se odnosi na fotografiranje na vjenčanju te fotografiranje na lokaciji uz dogovor. Paket se ne odnosi na fotografiranje kod kuće na okupljanju ni na fotografiranje u restoranu.
 
 #### Foto Paket 2
-- Wedding book 30×30 cm, 30 listova / 60 stranica
-- Fotografiranje na vjenčanju i na lokaciji
-- Ne uključuje fotografiranje okupljanja kod kuće ni u restoranu
+Kožni wedding book 30×30 cm (30 listova / 60 stranica). Fotografiranje se odnosi na fotografiranje na vjenčanju te fotografiranje na lokaciji uz dogovor. Paket se ne odnosi na fotografiranje kod kuće na okupljanju ni na fotografiranje u restoranu.
 
-#### Foto Paket 3 — oznaka: Popularno
-- Wedding book 30×40 cm, 20 listova / 40 stranica
-- Fotografiranje na vjenčanju, na lokaciji i u restoranu do večere
-- Ne uključuje fotografiranje nakon večere
+#### Foto Paket 3
+Kožni wedding book 30×40 cm (20 listova / 40 stranica). Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do večere. Paket se ne odnosi na fotografiranje poslije večere.
 
 #### Foto Paket 4
-- Wedding book 30×40 cm, 30 listova / 50 stranica
-- Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00
+Kožni wedding book 30×40 cm (30 listova / 60 stranica). Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do 3:00 ujutro.
 
 #### Foto Paket 5
-- Wedding book 30×40 cm, 40 listova / 80 stranica
-- Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:00
+Kožni wedding book 30×40 cm (40 listova / 80 stranica). Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do 3:00 ujutro.
 
 #### Foto Paket 6
-- Wedding book 30×40 cm, 40 listova / 80 stranica, uz dva dodatna booka 15×20 cm
-- Fotografiranje na vjenčanju, na lokaciji i u restoranu do 03:30
+Kožni wedding book 30×40 cm (40 listova / 80 stranica) te dodatna dva wedding booka 15×20 cm. Fotografiranje se odnosi na fotografiranje na vjenčanju, fotografiranje na lokaciji uz dogovor i u restoranu do 3:30 ujutro.
+
+**Napomena ispod foto paketa:** Studio Video Alfa zadržava pravo potpune kreativnosti prilikom izrade wedding booka, kao i pravo stilskog izražaja prilikom fotografiranja na terenu.
 
 ### Kartica „Video paketi”
 
 **Zajednički tekst iznad paketa:**
 
-Snimamo dan prema terminu iz paketa i od snimljenog materijala montiramo film: uvodnu špicu, glavni spot snimljen na lokaciji koju odaberete i ostatak dana. Film je u Full HD rezoluciji i dobivate ga na USB-u.
+Snimanje na lokaciji za spot po izboru mladenaca.
 
-Paketi se razlikuju po tome kad počinjemo snimati, koliko traje montirani film i s koliko kamera snimamo.
+U Full HD kvaliteti 16:9 (widescreen).
 
-Dodatne izmjene ili skraćivanje filma naplaćujemo prema utrošenom vremenu.
+Dodatna montaža ili želje mladenaca za izmjenom ili skraćivanjem snimke dodatno se naplaćuju ovisno o utrošenom vremenu.
 
 #### Video Paket 1
-- Uvodna špica + 1 spot
-- Snimamo od 16:00 do 03:00
-- Montirani film od 2,5 sata
+Uvodna špica + 1 glavni spot. Snimamo od 16:00 na dan vjenčanja do 03:00 sljedećeg dana. Ukupno 2,5 sata materijala, koji računalno obrađujemo, dodajemo uvod i spot te arhiviramo na USB stick.
 
 #### Video Paket 2
-- Uvodna špica + 1 spot
-- Snimamo od 16:00 do 03:00
-- Montirani film od 3 sata
+Uvodna špica + 1 glavni spot. Snimamo od 16:00 na dan vjenčanja do 03:00 sljedećeg dana. Ukupno 3 sata materijala, koji računalno obrađujemo, dodajemo uvod i spot te arhiviramo na USB stick.
 
-#### Video Paket 3 — oznaka: Popularno
-- Uvodna špica + 1 spot
-- Snimamo od 14:00 do 03:00
-- Montirani film od 3,5 sata
+#### Video Paket 3
+Uvodna špica + 1 glavni spot. Snimamo od 14:00 na dan vjenčanja do 03:00 sljedećeg dana. Ukupno 3,5 sata materijala, koji računalno obrađujemo, dodajemo uvod i spot te arhiviramo na USB stick.
 
 #### Video Paket 4
-- Uvodna špica + 1 spot
-- Snimamo od 12:00 do 03:00
-- Montirani film od 4 sata
+Uvodna špica + 1 glavni spot. Snimamo od 12:00 na dan vjenčanja do 03:00 sljedećeg dana. Ukupno 4 sata materijala, koji računalno obrađujemo, dodajemo uvod i spot te arhiviramo na USB stick.
 
 #### Video Paket 5
-- Uvodna špica + 1 spot
-- Snimamo od 12:00 do 03:30
-- Montirani film od 4,5 sata
-- Dvije kamere: prva od 12:00 do 03:30, druga od 12:00 do 20:00
+Uvodna špica + 1 glavni spot. Snimamo od 12:00 na dan vjenčanja do 03:30 sljedećeg dana. Ukupno 4,5 sata materijala, koji računalno obrađujemo, dodajemo uvod i spot te arhiviramo na USB stick. Snimanje s dvije kamere: kamerman 1 od 12:00 do 03:30, kamerman 2 od 12:00 do 20:00.
 
 #### Video Paket 6
-- Uvodna špica + 1 spot
-- Snimamo od 12:00 do 03:30
-- Montirani film od 4,5 sata
-- Dvije kamere: prva od 12:00 do 03:30, druga od 12:00 do 20:00
-- Dron od 12:00 do ulaska u restoran
+Uvodna špica + 1 glavni spot. Snimamo od 12:00 na dan vjenčanja do 03:30 sljedećeg dana. Ukupno 4,5 sata materijala, koji računalno obrađujemo, dodajemo uvod i spot te arhiviramo na USB stick. Snimanje s dvije kamere i dronom: kamerman 1 od 12:00 do 03:30, kamerman 2 od 12:00 do 20:00, snimatelj s dronom od 12:00 do ulaska u restoran.
+
+**Napomena ispod video paketa:** Foto studio Video Alfa zadržava pravo potpune kreativnosti prilikom izrade videosnimke, kao i pravo stilskog izražaja prilikom snimanja na terenu.
 
 ### Kartica „Light show”
-
-**Zajednički tekst iznad paketa:**
-
-Light show radimo za prvi ples i za rezanje torte, a cijelu salu osvjetljavamo u bojama tijekom večeri.
 
 #### Light show
 - Prvi ples: niski dim, 4 prskalice i balončići
 - Rasvjeta i bojanje cijele sale
 - Torta: niski dim i 2 prskalice
+
+Gumb: **Zatraži ponudu**
 
 ## 4.3 Poziv na akciju
 
@@ -415,21 +372,19 @@ Stranica: `app/contact/page.tsx`
 
 **Komponenta:** `ContactHero` – `components/contact/ContactHero.tsx`
 
-Nadnaslov: Kontakt
-
-# Započnimo vašu priču zajedno
-
-Slobodno nam se javite za provjeru dostupnosti, dodatne informacije ili personaliziranu ponudu. Veselimo se vašem danu.
+# Kontakt
 
 ## 5.2 Kontakt obrazac
 
 **Komponenta:** `Contact` – `components/contact/Contact.tsx`
 
-*(ista komponenta kao na početnoj – vidi 1.9; tekst je identičan)*
+*(ista komponenta kao na početnoj – vidi 1.8; ovdje s drugim nadnaslovom i odlomkom)*
 
-Nadnaslov: Kontakt
+Nadnaslov: Upit
 
 ## Započnimo vašu priču zajedno
+
+Slobodno nam se javite za provjeru dostupnosti, dodatne informacije ili personaliziranu ponudu. Veselimo se vašem danu.
 
 Polja obrasca: Ime i prezime · Email · Datum vjenčanja (DD.MM.GGGG) · Lokacija vjenčanja · Vaša poruka
 
@@ -448,7 +403,7 @@ Kontakt podaci: alfavjencanja@gmail.com · Mobitel: +385 98 660 275 · Telefon: 
 Gumb: **Rezervirajte termin**
 
 ### Studio
-- Alfa Vjenčanja
+- Foto studio Video Alfa
 - Bezvremenska fotografija
 
 ### Kontakt
@@ -459,4 +414,4 @@ Gumb: **Rezervirajte termin**
 - Facebook
 - Instagram
 
-© {tekuća godina} Alfa Vjenčanja. Sva prava pridržana.
+© {tekuća godina} Video Alfa. Sva prava pridržana.

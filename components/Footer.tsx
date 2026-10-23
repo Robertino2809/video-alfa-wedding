@@ -22,7 +22,7 @@ export default function Footer() {
           <h2
             className={`font-sans text-4xl md:text-4xl lg:text-4xl mb-12`}
           >
-            Imate datum? Javite nam se.
+            Započnimo vašu priču
           </h2>
 
           <Link
@@ -45,7 +45,7 @@ export default function Footer() {
               Studio
             </h3>
             <p>Foto studio Video Alfa</p>
-            <p>Braće Radić 13, Slatina</p>
+            <p>Bezvremenska fotografija</p>
           </div>
 
           {/* Contact */}

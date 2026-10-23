@@ -57,7 +57,7 @@ export default function VjencanjaHero({
               <>
                 <span className="font-sans text-4xl md:text-6xl lg:text-8xl font-light block mb-4">
                   {title}
-                </span>
+                </span>{" "}
                 <span className="font-sans text-3xl md:text-5xl font-light">
                   {titleSecond}
                 </span>

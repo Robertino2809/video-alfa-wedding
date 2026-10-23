@@ -16,7 +16,7 @@ export default function GalleryPreview() {
           viewport={{ once: true }}
           className="uppercase tracking-[0.4em] text-xs text-gray-500 mb-6"
         >
-          Galerija
+          Portfolio
         </motion.p>
 
         {/* Heading */}
@@ -28,10 +28,10 @@ export default function GalleryPreview() {
           className="mb-10 leading-tight"
         >
           <span className="font-[var(--font-pinyon)] text-6xl md:text-7xl block mb-3">
-            Iz naše
+            Priče
           </span>{" "}
           <span className="text-3xl md:text-5xl font-light">
-            galerije
+            koje traju zauvijek
           </span>
         </motion.h2>
 
@@ -43,7 +43,8 @@ export default function GalleryPreview() {
           viewport={{ once: true }}
           className="text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Izbor fotografija s vjenčanja koja smo snimali proteklih sezona.
+          Svako vjenčanje za nas je jedinstvena priča. Istražite odabrane
+          trenutke ispunjene emocijom, elegancijom i bezvremenskom estetikom.
         </motion.p>
 
         {/* CTA */}

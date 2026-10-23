@@ -73,6 +73,8 @@ export default function StatsSection() {
   const stats = [
     { value: 28, suffix: "+", label: "godina iskustva" },
     { value: 500, suffix: "+", label: "zadovoljnih mladenaca" },
+    { value: 1, suffix: " cilj", label: "savršeno zabilježen trenutak" },
+    { value: "∞", suffix: "", label: "uhvaćenih iskrenih trenutaka" },
   ];
 
   return (
@@ -85,12 +87,12 @@ export default function StatsSection() {
             Naše brojke
           </p>
           <h2 className="text-4xl md:text-5xl font-light">
-            Od 1998. do danas
+            Povjerenje koje traje godinama
           </h2>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 max-w-3xl mx-auto text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 text-center">
 
           {stats.map((stat, index) => (
             <motion.div
@@ -102,8 +104,14 @@ export default function StatsSection() {
               className="relative"
             >
               <h3 className="text-5xl md:text-6xl font-light mb-4">
-                <Counter value={stat.value} />
-                {stat.suffix}
+                {typeof stat.value === "number" ? (
+                  <>
+                    <Counter value={stat.value} />
+                    {stat.suffix}
+                  </>
+                ) : (
+                  stat.value
+                )}
               </h3>
 
               <p className="uppercase tracking-[0.2em] text-xs text-gray-500">

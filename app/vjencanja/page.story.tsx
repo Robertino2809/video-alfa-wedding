@@ -31,7 +31,7 @@ export default function VjencanjaPage() {
         eyebrow="Vjenčanja"
         title="Priče"
         titleSecond="s vjenčanja"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Svako vjenčanje koje snimamo je drugačije. Ovdje izdvajamo neka od njih."
       />
 
       <section className="max-w-6xl mx-auto px-6 py-32">

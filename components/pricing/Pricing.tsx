@@ -9,9 +9,9 @@ export default function Pricing() {
       name: "Fotografija",
       tab: "foto",
       features: [
-        "Kožni wedding book po vašem izboru",
-        "Fotografiranje ceremonije i photo sessiona na lokaciji koju odaberete",
-        "Sve fotografije na USB-u",
+        "Kožni wedding book po izboru",
+        "Fotografiranje ceremonije i photo sessiona",
+        "Fotografije arhivirane na USB",
       ],
     },
     {
@@ -19,17 +19,18 @@ export default function Pricing() {
       tab: "video",
       features: [
         "Uvodna špica i glavni spot",
-        "Snimanje s dvije kamere i dronom u većim paketima",
-        "Montirani film na USB-u",
+        "Full HD 16:9 (widescreen)",
+        "Snimanje dronom dostupno uz odabrane pakete",
+        "Arhivirano na USB stick",
       ],
     },
     {
       name: "Light show",
       tab: "light-show",
       features: [
-        "Niski dim, prskalice i balončići za prvi ples",
+        "Niski dim, 4 prskalice i balončići za prvi ples",
         "Rasvjeta i bojanje cijele sale",
-        "Niski dim i prskalice za tortu",
+        "Niski dim i 2 prskalice za tortu",
       ],
     },
   ];
@@ -46,7 +47,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="uppercase tracking-[0.4em] text-xs text-gray-500 mb-6"
         >
-          Što radimo
+          Što nudimo
         </motion.p>
 
         {/* Heading */}
@@ -58,10 +59,10 @@ export default function Pricing() {
           className="mb-16"
         >
           <span className="font-[var(--font-pinyon)] text-6xl md:text-7xl block mb-3">
-            Fotografija,
+            Usluge
           </span>{" "}
           <span className="text-3xl md:text-5xl font-light">
-            video i light show
+            prilagođene vašoj priči
           </span>
         </motion.h2>
 

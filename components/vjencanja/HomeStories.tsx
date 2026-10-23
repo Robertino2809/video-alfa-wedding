@@ -48,7 +48,7 @@ export default function HomeStories({
           >
             <span className="font-[var(--font-pinyon)] text-6xl md:text-7xl block mb-3">
               Priče
-            </span>
+            </span>{" "}
             <span className="text-3xl md:text-5xl font-light">
               s vjenčanja
             </span>
@@ -62,7 +62,7 @@ export default function HomeStories({
             viewport={{ once: true }}
             className="text-gray-600 max-w-2xl mx-auto leading-relaxed"
           >
-            Svako vjenčanje ima svoju priču. Ovdje ih pričamo do kraja, od priprema do prvog plesa.
+            Svako vjenčanje koje snimamo je drugačije. Ovdje izdvajamo neka od njih.
           </motion.p>
         </div>
 

@@ -37,16 +37,6 @@ export default function ContactHero() {
             className="h-[1px] bg-white mx-auto my-8"
           />
 
-          {/* Description */}
-          <motion.p
-            initial={{ y: 12 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="text-white/80 max-w-2xl mx-auto leading-relaxed"
-          >
-            Javite nam datum i mjesto vjenčanja i provjerit ćemo jesmo li slobodni.
-          </motion.p>
-
         </div>
       </div>
       {/* 🔥 Bottom curved shape */}

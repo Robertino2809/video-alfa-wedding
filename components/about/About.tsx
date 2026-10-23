@@ -39,18 +39,22 @@ export default function About() {
 
           <h2 className="text-3xl md:text-5xl leading-tight mb-8">
             <span className="font-[var(--font-pinyon)] text-5xl md:text-6xl block mb-2">
-              Isti ljudi
+              Strast
             </span>{" "}
             <span className="font-light">
-              od dogovora do zadnjeg plesa
+              prema bezvremenskoj eleganciji
             </span>
           </h2>
 
+          <p className="text-gray-600 leading-relaxed mb-6">
+            Godinama fotografiramo vjenčanja s naglaskom na autentične emocije,
+            profinjenu estetiku i detalje koji čine razliku.
+          </p>
+
           <p className="text-gray-600 leading-relaxed mb-10">
-            Video Alfa je obiteljski studio iz Slatine i vjenčanja snimamo
-            od 1998. Prvo se nađemo u studiju i dogovorimo plan dana i
-            lokacije za fotografiranje. Na vjenčanju vas čekaju isti ljudi
-            s kojima ste sve to dogovorili.
+            Naš pristup temelji se na smirenosti, diskreciji i osjećaju za
+            trenutak. Vjerujemo da prava ljepota nastaje spontano – a naš
+            zadatak je zabilježiti je s mjerom i stilom.
           </p>
 
           <motion.div
@@ -63,7 +67,7 @@ export default function About() {
               href="/about"
               className="relative inline-block uppercase tracking-[0.3em] text-sm group border-black"
             >
-              Više o nama
+              Saznajte više
 
               <span className="absolute left-0 -bottom-2 w-full h-[1px] bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             </Link>
